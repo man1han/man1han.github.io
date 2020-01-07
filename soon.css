@@ -1,0 +1,39 @@
+html {
+	color: white;
+	background-color: #2E2E2E;
+	scroll-behavior: smooth;
+}
+
+head {
+	/*Nothing here*/
+}
+
+body {
+	margin:0;
+	padding:0;
+	font-family:'Amatic SC', cursive;
+}
+
+.text {
+	position: absolute;
+	font-size: 15vmin;
+	top:30%;
+	left:50%;
+	transform: translate(-50%, -50%);
+}
+
+.icon img {
+	display: block;
+	max-width: 15vmin;
+	border:1px solid white;
+	object-fit: contain;
+}
+
+.more-text {
+	position: absolute;
+	display: inline-block;
+	font-size: 10vmin;
+	top:70%;
+	left:50%;
+	transform: translate(-50%, 50%);
+}
