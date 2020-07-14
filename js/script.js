@@ -25,6 +25,7 @@ $(document).ready(function() {
     menuBtn.classList.remove('open');
     navButtons.classList.remove('op');
     menuOpen = false;
+    $("#logo").css("background-color", "#fff");
   });
 
   $("#projectBtn").click(function() {
@@ -38,6 +39,7 @@ $(document).ready(function() {
     menuBtn.classList.remove('open');
     navButtons.classList.remove('op');
     menuOpen = false;
+    $("#logo").css("background-color", "rgb(59, 51, 172)");
   });
   
   $("#artBtn").click(function() {
@@ -51,6 +53,8 @@ $(document).ready(function() {
     menuBtn.classList.remove('open');
     navButtons.classList.remove('op');
     menuOpen = false;
+    $("#logo").css("background-color", "rgb(121, 40, 155)");
+
   });
   
   $("#blogBtn").click(function() {
@@ -64,6 +68,7 @@ $(document).ready(function() {
     menuBtn.classList.remove('open');
     navButtons.classList.remove('op');
     menuOpen = false;
+    $("#logo").css("background-color", "rgb(170, 50, 19)");
   });
 });
 
@@ -132,19 +137,19 @@ for (var i = 0, len = imBtn.length; i < len; i++)
 //     }
 // }
 
-
-window.onclick = function(event) {
-  for(var i=0; i<=modal.length || i<imModal.length ;i++){
-    if (event.target == modal[i]) {
-      modal[i].style.opacity = "0";
-      modal[i].style.visibility = "hidden";
-    }
-    if (event.target == imModal[i]) {
-      imModal[i].style.opacity = "0";
-      imModal[i].style.visibility = "hidden";
-    }
-  }
-}
+//CORRECT CLOSER
+// window.onclick = function(event) {
+//   for(var i=0; i<=modal.length || i<imModal.length ;i++){
+//     if (event.target == modal[i]) {
+//       modal[i].style.opacity = "0";
+//       modal[i].style.visibility = "hidden";
+//     }
+//     if (event.target == imModal[i]) {
+//       imModal[i].style.opacity = "0";
+//       imModal[i].style.visibility = "hidden";
+//     }
+//   }
+// }
 
 $("#all").click(function(){
   $(".technical, .nonTechnical").css("display", "block");
@@ -158,3 +163,50 @@ $("#nonTech").click(function(){
   $(".technical").css("display", "none");
   $(".nonTechnical").css("display", "block");
 });
+
+// var touchEvent;
+
+// First we check if you support touch, otherwise it's click:
+// touchEvent = 'ontouchstart' in window ? 'ontouchstart' : 'onclick';
+if ('ontouchstart' in window) {
+  window.ontouchstart = function(event) {
+      for(var i=0; i<=modal.length || i<imModal.length ;i++){
+        if (event.target == modal[i]) {
+          modal[i].style.opacity = "0";
+          modal[i].style.visibility = "hidden";
+        }
+        if (event.target == imModal[i]) {
+          imModal[i].style.opacity = "0";
+          imModal[i].style.visibility = "hidden";
+        }
+      }
+    }
+}
+else {
+  window.onclick = function(event) {
+      for(var i=0; i<=modal.length || i<imModal.length ;i++){
+        if (event.target == modal[i]) {
+          modal[i].style.opacity = "0";
+          modal[i].style.visibility = "hidden";
+        }
+        if (event.target == imModal[i]) {
+          imModal[i].style.opacity = "0";
+          imModal[i].style.visibility = "hidden";
+        }
+      }
+    }
+}
+
+// Then we bind via thát event. This way we only bind one event, instead of the two as below
+// window.addEventListener(touchEvent, () => {
+//   for(var i=0; i<=modal.length || i<imModal.length ;i++){
+//     if (touchEvent.target == modal[i]) {
+//       modal[i].style.opacity = "0";
+//       modal[i].style.visibility = "hidden";
+//     }
+//     if (touchEvent.target == imModal[i]) {
+//       imModal[i].style.opacity = "0";
+//       imModal[i].style.visibility = "hidden";
+//     }
+//   }
+// });
