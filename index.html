@@ -6,204 +6,373 @@
         <title> Manthan Bhatt </title>
         <link rel="stylesheet" href="/css/main.css">
         <link rel="stylesheet" href="/css/style.css">
-        <link rel="stylesheet" href="/css/variations.css">
+
+        <link rel="stylesheet" href="/css/projects.css">
+        <link rel="stylesheet" href="/css/artworks.css">
+        <link rel="stylesheet" href="/css/writeup.css">
+
         <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     </head>
     
     <body class="body-wrapper">
+
         <!-- NAVBAR -->
         <nav class="navbar">
-                <div class="navLeft">
-                    <!-- LOGO AND NAME -->
-                    <a><img src="https://via.placeholder.com/50/222222/000000/?text=MB"></a>
-                    <p class="ts2 tw100">Manthan Bhatt</p>
-                </div>
-                
-                <div class="ham">
-                    <div class="ham-btn"></div>
-                </div>
-                <div class="navRight">
-                    <!-- NAV BUTTONS -->
-                    
-                        <div id="myBtns" class="navBtn">
-                            <button id="projB" class="btn1">Projects</button>
-                            <button id="artB" class="btn2">Artworks</button>
-                            <button id="blogB" class="btn3">Write-ups</button>
-                        </div>
-                    
-                </div>
-        </nav>
 
+            <!-- LEFT SIDE OF THE NAVBAR -->
+            <div id="navLeft">
+                <!-- LOGO AND NAME -->
+                <img id="logo" src="https://via.placeholder.com/50/222222/000000/?text=MB">
+                
+                <p id="name">
+                    Manthan Bhatt
+                </p>
+            </div>
+
+            <!-- HAMBURGER BUTTON -->
+            <div class="ham">
+                <div class="ham-btn"></div>
+            </div>
+            
+            <!-- RIGHT SIDE OF THE NAVBAR -->
+            <div class="navRight">
+                <!-- NAV BUTTONS -->
+                <div class="navBtn">
+                    <button id="projectBtn" title="View my coding projects here">
+                        Projects
+                    </button>
+                    <button id="artBtn" title="Look at my artwork here">
+                        Artworks
+                    </button>
+                    <button id="blogBtn" title="Read about what I'm upto here">
+                        Write-ups
+                    </button>
+                </div>
+            </div>
+        </nav>
         
         <!-- HOME PAGE -->
         <div class="home-wrapper">
             <div class="home-text">
-                <h3 class=" tw500">Hi, my name is Manthan</h3>
-                <p class=" tw100 ls2">
+                <h3 id="home-head">Hi, my name is Manthan</h3>
+                <p id="home-body">
                     I am an intermediate Level Programmer who also loves to make Illustrations. <br>
                     Currently, I am a sophomore studying Computer science. I intend to combine my interests and explore game-development. In the future, I want to research in Artificial Intelligence and Robotics.
                 </p>
             </div>
-
+            
             <div class="home-image">
                 <img  src="https://via.placeholder.com/1000/FFFFFF/000000/?text=-Placeholder Image-">
             </div>
-            
         </div>
 
         <!-- PROJECT PAGE -->
         <div class="proj-wrapper">
+            
+            <!-- PROJECT CARDS -->
             <div class="cards">
-                <div  class="card">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/500/FFFFFF/000000/?text=-Placeholder Image-">
-                        <div class="project-title">
-                            PROJECT TITLE.
-                        </div>
-                        <a href="https://github.com/man1han" class="project-button1">
+                
+                <div class="card">
+                    <div class="card-content">
+                        <a href="https://github.com/man1han" class="git-button">
                             <img src="/files/images/GitHub-Mark-120px-plus.png">
                         </a>
+                        <img class="project-image" src="/files/images/easter-eggs.jpg">
+                        <div id="project-name">
+                            Project Title.
+                        </div>
                     </div>
                     <div class="modal">
-                        hola
+                        <div class="modal-box">
+                            Hello
+                        </div>
                     </div>
                 </div>
+
                 <div class="card">
-                    <div class="project-image">
-                        <img src="https://via.placeholder.com/500/FFFFFF/000000/?text=-Placeholder Image-">
-                        <div class="project-title">
-                            PROJECT TITLE.
-                        </div>
-                        <a href="https://github.com/man1han" class="project-button1">
+                    <div class="card-content">
+                        <a href="https://github.com/man1han" class="git-button">
                             <img src="/files/images/GitHub-Mark-120px-plus.png">
                         </a>
+                        <img class="project-image" src="/files/images/easter-eggs.jpg">
+                        <div id="project-name">
+                            Project Title.
+                        </div>
                     </div>
                     <div class="modal">
-                        amigo
+                        <div class="modal-box">
+                            Hello
+                        </div>
                     </div>
                 </div>
+
                 <div class="card">
-                    <div class="project-image">
-                        <img  src="https://via.placeholder.com/500/FFFFFF/000000/?text=-Placeholder Image-">
-                        <div class="project-title">
-                            PROJECT TITLE.
-                        </div>
-                        <a href="https://github.com/man1han" class="project-button1">
+                    <div class="card-content">
+                        <a href="https://github.com/man1han" class="git-button">
                             <img src="/files/images/GitHub-Mark-120px-plus.png">
                         </a>
+                        <img class="project-image" src="/files/images/easter-eggs.jpg">
+                        <div id="project-name">
+                            Project Title.
+                        </div>
+                    </div>
+                    <div class="modal">
+                        <div class="modal-box">
+                            Hello
+                        </div>
                     </div>
                 </div>
+
                 <div class="card">
-                    <div class="project-image">
-                        <img  src="https://via.placeholder.com/500/FFFFFF/000000/?text=-Placeholder Image-">
-                        <div class="project-title">
-                            PROJECT TITLE.
-                        </div>
-                        <a href="https://github.com/man1han" class="project-button1">
+                    <div class="card-content">
+                        <a href="https://github.com/man1han" class="git-button">
                             <img src="/files/images/GitHub-Mark-120px-plus.png">
                         </a>
+                        <img class="project-image" src="/files/images/easter-eggs.jpg">
+                        <div id="project-name">
+                            Project Title.
+                        </div>
+                    </div>
+                    <div class="modal">
+                        <div class="modal-box">
+                            Hello
+                        </div>
                     </div>
                 </div>
+
                 <div class="card">
-                    <div class="project-image">
-                        <img  src="https://via.placeholder.com/500/FFFFFF/000000/?text=-Placeholder Image-">
-                        <div class="project-title">
-                            PROJECT TITLE.
-                        </div>
-                        <a href="https://github.com/man1han" class="project-button1">
+                    <div class="card-content">
+                        <a href="https://github.com/man1han" class="git-button">
                             <img src="/files/images/GitHub-Mark-120px-plus.png">
                         </a>
+                        <img class="project-image" src="/files/images/easter-eggs.jpg">
+                        <div id="project-name">
+                            Project Title.
+                        </div>
+                    </div>
+                    <div class="modal">
+                        <div class="modal-box">
+                            Hello
+                        </div>
                     </div>
                 </div>
+
                 <div class="card">
-                    <div class="project-image">
-                        <img  src="https://via.placeholder.com/500/FFFFFF/000000/?text=-Placeholder Image-">
-                        <div class="project-title">
-                            PROJECT TITLE.
-                        </div>
-                        <a href="https://github.com/man1han" class="project-button1">
+                    <div class="card-content">
+                        <a href="https://github.com/man1han" class="git-button">
                             <img src="/files/images/GitHub-Mark-120px-plus.png">
                         </a>
+                        <img class="project-image" src="/files/images/easter-eggs.jpg">
+                        <div id="project-name">
+                            Project Title.
+                        </div>
+                    </div>
+                    <div class="modal">
+                        <div class="modal-box">
+                            Hello
+                        </div>
                     </div>
                 </div>
+
                 <div class="card">
-                    <div class="project-image">
-                        <img  src="https://via.placeholder.com/500/FFFFFF/000000/?text=-Placeholder Image-">
-                        <div class="project-title">
-                            PROJECT TITLE.
-                        </div>
-                        <a href="https://github.com/man1han" class="project-button1">
+                    <div class="card-content">
+                        <a href="https://github.com/man1han" class="git-button">
                             <img src="/files/images/GitHub-Mark-120px-plus.png">
                         </a>
+                        <img class="project-image" src="/files/images/easter-eggs.jpg">
+                        <div id="project-name">
+                            Project Title.
+                        </div>
+                    </div>
+                    <div class="modal">
+                        <div class="modal-box">
+                            Hello
+                        </div>
                     </div>
                 </div>
+
                 <div class="card">
-                    <div class="project-image">
-                        <img  src="https://via.placeholder.com/500/FFFFFF/000000/?text=-Placeholder Image-">
-                        <div class="project-title">
-                            PROJECT TITLE.
+                    <div class="card-content">
+                        <a href="https://github.com/man1han" class="git-button">
+                            <img src="/files/images/GitHub-Mark-120px-plus.png">
+                        </a>
+                        <img class="project-image" src="/files/images/easter-eggs.jpg">
+                        <div id="project-name">
+                            Project Title.
                         </div>
-                        <div>
-                            <a href="https://github.com/man1han" class="project-button1">
-                                <img src="/files/images/GitHub-Mark-120px-plus.png">
-                            </a>
+                    </div>
+                    <div class="modal">
+                        <div class="modal-box">
+                            Hello
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <div class="art-wrapper">
 
+        <!-- ARTWORKS PAGE -->
+        <div class="art-wrapper">
+            
             <div class="masonry">
+
                 <div class="brick">
                     <img class="im" src="files/images/cherry-plant.jpg" alt="Cherry plant" title="Cherry plant">
                     <div class="middle">
                         <div class="overlay">Title</div>
                     </div>
+                    <div class="image-modal">
+                        <div class="image-modal-box">
+                            no
+                        </div>
+                    </div>
                 </div>
+
                 <div class="brick">
-                    <img src="files/images/oranges-pomegranates.jpg" alt="Oranges and Pomegranates" title="Oranges and Pomegranates">
+                    <img class="im" src="files/images/oranges-pomegranates.jpg" alt="Oranges and Pomegranates" title="Oranges and Pomegranates">
                     <div class="middle">
                         <div class="overlay">Title</div>
                     </div>
+                    <div class="image-modal">
+                        <div class="image-modal-box">
+                            no
+                        </div>
+                    </div>
                 </div>
+
                 <div class="brick">
-                    <img src="files/images/strawberry.jpg" alt="Strawberry" title="Strawberry">
+                    <img class="im" src="files/images/strawberry.jpg" alt="Strawberry" title="Strawberry">
                     <div class="middle">
                         <div class="overlay">Title</div>
                     </div>
+                    <div class="image-modal">
+                        <div class="image-modal-box">
+                            Hello
+                        </div>
+                    </div>
                 </div>
+
                 <div class="brick">
-                    <img src="files/images/blueberries.jpg" alt="Blueberries" title="Blueberries">
+                    <img class="im" src="files/images/blueberries.jpg" alt="Blueberries" title="Blueberries">
                     <div class="middle">
                         <div class="overlay">Title</div>
                     </div>
+                    <div class="image-modal">
+                        <div class="image-modal-box">
+                            Hello
+                        </div>
+                    </div>
                 </div>
+
                 <div class="brick">
-                    <img src="files/images/lemons.jpg" alt="Lemons" title="Lemons">
+                    <img class="im" src="files/images/lemons.jpg" alt="Lemons" title="Lemons">
                     <div class="middle">
                         <div class="overlay">Title</div>
                     </div>
+                    <div class="image-modal">
+                        <div class="image-modal-box">
+                            Hello
+                        </div>
+                    </div>
                 </div>
+
                 <div class="brick">
-                    <img src="files/images/easter-eggs.jpg" alt="Easter-eggs" title="Easter-eggs">
+                    <img class="im" src="files/images/easter-eggs.jpg" alt="Easter-eggs" title="Easter-eggs">
                     <div class="middle">
                         <div class="overlay">Title</div>
+                    </div>
+                    <div class="image-modal">
+                        <div class="image-modal-box">
+                            Hello
+                        </div>
+                    </div>
+                </div>
+
+                <div class="brick">
+                    <img class="im" src="files/images/cherry-plant.jpg" alt="Cherry plant" title="Cherry plant">
+                    <div class="middle">
+                        <div class="overlay">Title</div>
+                    </div>
+                    <div class="image-modal">
+                        <div class="image-modal-box">
+                            no
+                        </div>
+                    </div>
+                </div>
+
+                <div class="brick">
+                    <img class="im" src="files/images/oranges-pomegranates.jpg" alt="Oranges and Pomegranates" title="Oranges and Pomegranates">
+                    <div class="middle">
+                        <div class="overlay">Title</div>
+                    </div>
+                    <div class="image-modal">
+                        <div class="image-modal-box">
+                            no
+                        </div>
+                    </div>
+                </div>
+
+                <div class="brick">
+                    <img class="im" src="files/images/strawberry.jpg" alt="Strawberry" title="Strawberry">
+                    <div class="middle">
+                        <div class="overlay">Title</div>
+                    </div>
+                    <div class="image-modal">
+                        <div class="image-modal-box">
+                            Hello
+                        </div>
+                    </div>
+                </div>
+
+                <div class="brick">
+                    <img class="im" src="files/images/blueberries.jpg" alt="Blueberries" title="Blueberries">
+                    <div class="middle">
+                        <div class="overlay">Title</div>
+                    </div>
+                    <div class="image-modal">
+                        <div class="image-modal-box">
+                            Hello
+                        </div>
+                    </div>
+                </div>
+
+                <div class="brick">
+                    <img class="im" src="files/images/lemons.jpg" alt="Lemons" title="Lemons">
+                    <div class="middle">
+                        <div class="overlay">Title</div>
+                    </div>
+                    <div class="image-modal">
+                        <div class="image-modal-box">
+                            Hello
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="brick">
+                    <img class="im" src="files/images/easter-eggs.jpg" alt="Easter-eggs" title="Easter-eggs">
+                    <div class="middle">
+                        <div class="overlay">Title</div>
+                    </div>
+                    <div class="image-modal">
+                        <div class="image-modal-box">
+                            Hello
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-
+        <!-- WRITEUPS PAGE -->
         <div class="write-wrapper">
-            <!-- Tech, fiction -->
             <div class="filter">
+                <div id="filter-title">
+                    Filter Options
+                </div>
                 <div class="filterBtn">
                     <button id="all">Show All</button>
                     <button id="tech">Technical</button>
                     <button id="nonTech">Non-Technical</button>
                 </div>
+                <div id="filterArt"></div>
             </div>
             <div class="list">
                 <div class="content technical">11</div>
@@ -216,8 +385,25 @@
             </div>
         </div>
 
-        <footer class="tw100 ls1" style="grid-area: foot; text-align: center;">
-            Made with LOVE and FRUSTRATION <br> *heart emoji*
+        <footer>
+            <div class="socials">
+                <a class="fb">
+                    <img src="/files/images/linkedin.png">
+                </a>
+                <!-- <a class="fb">
+                    <img src="/files/images/linkedin.png">
+                </a>
+                <a class="fb">
+                    <img src="/files/images/linkedin.png">
+                </a> -->
+                <!-- <a class="fb">
+                    <img src="/files/images/linkedin.png">
+                </a> -->
+            </div>
+            <div class="foot-text">
+                Made with LOVE and FRUSTRATION <br> *heart emoji*
+            </div>
+            
         </footer>
 
     
