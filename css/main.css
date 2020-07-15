@@ -28,7 +28,7 @@ p {
 }
 
 footer {
-    grid-area: foot;
+    /*grid-area: foot;*/
     display: flex;
     position: sticky;
     bottom: 0;
