@@ -193,6 +193,7 @@
 #name {
     font-size: 2rem;
     font-weight: 100;
+    padding-left: 5px;
 }
 
 #navLeft:hover {
@@ -289,18 +290,23 @@
 .home-text {
     grid-area: t;
     text-align: justify;
-    padding: 1.7rem;
+    padding: 1rem;
+}
+
+.home-wrapper p {
+    display: initial;
 }
 
 .home-image {
     grid-area: i;
     border: 2px solid #fff;
-    padding: 2rem;
+    max-height: 100%;
+    /* padding: 2rem; */
 }
 .home-image > img {
     height: 99%;
     width: 99%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 #home-head {
@@ -310,8 +316,9 @@
 }
 
 #home-body {
+    font-size: 2.4vw;
     font-weight: 200;
-    letter-spacing: 0.1rem;
+    /* letter-spacing: 0.1px; */
 }
 
 /* ---------------- HOME PAGE ENDs HERE ---------------- */
@@ -322,10 +329,14 @@
     /* less than 600px (phones) */
 
     .home-text {
-        font-size: 1.5rem;
+        /* font-size: 1.5rem; */
         padding-left: 7vw;
         padding-right: 7vw;
         text-align: left;
+    }
+
+    #home-body {
+        font-size: 7vw;
     }
 }
 
@@ -372,7 +383,7 @@
     border-radius: 100%;
     /* border: 1px solid white; */
     /* background:rgba(220, 225, 225, 1); */
-    transition: border 0.2s ease-in-out, filter 0.6s;
+    transition: border 0.2s ease-in-out, filter 0.2s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 #linked-contact {
@@ -402,6 +413,7 @@
     #linked-contact {
         filter: grayscale(1);
         border: 1px solid white;
+        /* background-color: rgba(255,225,225,0.7); */
         /* transition: filter 0.6s ease-in-out, border 0.6s ease-in-out; */
     }
     
@@ -424,6 +436,7 @@
     #linked-contact:hover {
         filter: grayscale(0);
         border: 2px solid white;
+        background-color: rgba(255, 255, 255, 1);
     }
 
     #git-contact:hover {
@@ -432,7 +445,7 @@
     }
 
     #insta-contact:hover {
-        filter: none;
+        filter: grayscale(0);
         border: 2px solid white;
     }
 }

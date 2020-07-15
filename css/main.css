@@ -30,6 +30,8 @@ p {
 footer {
     grid-area: foot;
     display: flex;
+    position: sticky;
+    bottom: 0;
     justify-content: center;
     flex-direction: column;
     padding: 2px;
@@ -62,7 +64,7 @@ footer {
     background: #555;
 }
 ::-webkit-scrollbar-corner {
-    display: hidden;
+    display: none;
     background: #ffc17b;
 }
 /* ::-webkit-resizer {
