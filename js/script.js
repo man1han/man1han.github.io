@@ -7,6 +7,7 @@ if ('ontouchstart' in window) {
       menuBtn.classList.add('open');
       navButtons.classList.add('op');
       menuOpen = true;
+      
     } else {
       menuBtn.classList.remove('open');
       navButtons.classList.remove('op');
@@ -41,6 +42,11 @@ $(document).ready(function() {
     menuBtn.classList.remove('open');
     navButtons.classList.remove('op');
     menuOpen = false;
+    $("#logo").css({'transform' : 'rotateY('+ 90 +'deg)'});
+    $("#logo").delay(350).queue(function (next) { 
+      $(this).css({'transform' : 'rotateY('+ 0 +'deg)'}); 
+      next();
+    });
     $("#logo").css("background-color", "#fff");
   });
 
@@ -55,6 +61,11 @@ $(document).ready(function() {
     menuBtn.classList.remove('open');
     navButtons.classList.remove('op');
     menuOpen = false;
+    $("#logo").css({'transform' : 'rotateY('+ 90 +'deg)'});
+    $("#logo").delay(350).queue(function (next) { 
+      $(this).css({'transform' : 'rotateY('+ 0 +'deg)'}); 
+      next(); 
+    });
     $("#logo").css("background-color", "rgb(59, 51, 172)");
   });
   
@@ -69,6 +80,11 @@ $(document).ready(function() {
     menuBtn.classList.remove('open');
     navButtons.classList.remove('op');
     menuOpen = false;
+    $("#logo").css({'transform' : 'rotateY('+ 90 +'deg)'});
+    $("#logo").delay(350).queue(function (next) { 
+      $(this).css({'transform' : 'rotateY('+ 0 +'deg)'}); 
+      next(); 
+    });
     $("#logo").css("background-color", "rgb(121, 40, 155)");
 
   });
@@ -84,33 +100,27 @@ $(document).ready(function() {
     menuBtn.classList.remove('open');
     navButtons.classList.remove('op');
     menuOpen = false;
+    $("#logo").css({'transform' : 'rotateY('+ 90 +'deg)'});
+    $("#logo").delay(350).queue(function (next) { 
+      $(this).css({'transform' : 'rotateY('+ 0 +'deg)'}); 
+      next(); 
+    });
     $("#logo").css("background-color", "rgb(170, 50, 19)");
   });
+
 });
 
 // MODAL FUNCTIONS
 var modal = document.getElementsByClassName("modal");
 var btn = document.getElementsByClassName("project-image");
 
-
 // var span = document.getElementsByClassName("close")[0];
-
-//MODAL VISIBLE
-for (var i = 0, len = btn.length; i < len; i++)
-{
-  (function(index){
-    btn[i].onclick = function(){
-      modal[index].style.opacity = "1";
-      modal[index].style.visibility = "visible";
-    }    
-  })(i);
-}
-
 // When the user clicks on <span> (x), close the modal
 // span.onclick = function() {
 //   modal.style.display = "none";
 // }
-  
+
+// MODAL INVISIBLE
 // When the user clicks anywhere outside of the modal, close it
 // window.onclick = function(event) {
 //   console.log("modal was clicked")
@@ -123,36 +133,32 @@ for (var i = 0, len = btn.length; i < len; i++)
 //     }
 // }
 
-//IMAGE MODAL
+//MODAL VISIBLE
+// for (var i = 0, len = btn.length; i < len; i++)
+// {
+//   (function(index){
+//     btn[i].onclick = function(){
+//       modal[index].style.opacity = "1";
+//       modal[index].style.visibility = "visible";
+//     }    
+//   })(i);
+// }
+
+
+
+//IMAGE MODAL FUNCTIONS
 var imModal = document.getElementsByClassName("image-modal");
 var imBtn = document.getElementsByClassName("im");
-// var span = document.getElementsByClassName("close")[0];
 
 //MODAL VISIBLE
-for (var i = 0, len = imBtn.length; i < len; i++)
-{
-  (function(index){
-    imBtn[i].onclick = function(){
-      imModal[index].style.opacity = "1";
-      imModal[index].style.visibility = "visible";
-    }    
-  })(i);
-}
-
-// When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//   modal.style.display = "none";
-// }
-  
-// When the user clicks anywhere outside of the modal, close it
-// window.onclick = function(click) {
-//     var j;
-//     for(j=0; j<=imModal.length;j++){
-//         if (click.target == imModal[j]) {
-//             imModal[j].style.opacity = "0";
-//             imModal[j].style.visibility = "hidden";
-//         }
-//     }
+// for (var i = 0, len = imBtn.length; i < len; i++)
+// {
+//   (function(index){
+//     imBtn[i].onclick = function(){
+//       imModal[index].style.opacity = "1";
+//       imModal[index].style.visibility = "visible";
+//     }    
+//   })(i);
 // }
 
 //CORRECT CLOSER
@@ -186,9 +192,25 @@ $("#nonTech").click(function(){
 
 // First we check if you support touch, otherwise it's click:
 // touchEvent = 'ontouchstart' in window ? 'ontouchstart' : 'onclick';
+let touchmoved = true;
+window.addEventListener('touchmove', (e) => {
+  touchmoved = true;})
+window.addEventListener('touchstart', (e) => {
+  touchmoved = false;})
 if ('ontouchstart' in window) {
-  window.ontouchstart = function(event) {
+  window.ontouchend = function(event) {
+    if(touchmoved != true)
       for(var i=0; i<=modal.length || i<imModal.length ;i++){
+        if (event.target == btn[i]) {
+          modal[i].style.opacity = "1";
+          modal[i].style.visibility = "visible";
+        }
+
+        if (event.target == imBtn[i]) {
+          imModal[i].style.opacity = "1";
+          imModal[i].style.visibility = "visible";
+        }
+
         if (event.target == modal[i]) {
           modal[i].style.opacity = "0";
           modal[i].style.visibility = "hidden";
@@ -203,6 +225,14 @@ if ('ontouchstart' in window) {
 else {
   window.onclick = function(event) {
       for(var i=0; i<=modal.length || i<imModal.length ;i++){
+        if (event.target == btn[i]) {
+          modal[i].style.opacity = "1";
+          modal[i].style.visibility = "visible";
+        }
+        if (event.target == imBtn[i]) {
+          imModal[i].style.opacity = "1";
+          imModal[i].style.visibility = "visible";
+        }
         if (event.target == modal[i]) {
           modal[i].style.opacity = "0";
           modal[i].style.visibility = "hidden";

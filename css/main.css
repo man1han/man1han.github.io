@@ -15,7 +15,7 @@
 body {
     background: #000;
     color: #fff;
-    width: 100vw;
+    width: 100vw !important;
 }
 
 nav {
@@ -27,12 +27,13 @@ p {
     vertical-align: middle;
 }
 
-footer {
-    /*grid-area: foot;*/
+.footer {
+    grid-area: foot;
     display: flex;
     position: sticky;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
+    /* background: linear-gradient(0deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%); */
     justify-content: center;
     flex-direction: column;
     padding: 2px;
