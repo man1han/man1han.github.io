@@ -1,17 +1,33 @@
 const menuBtn = document.querySelector('.ham');
 const navButtons = document.querySelector(".navBtn")
 let menuOpen = false;
-menuBtn.addEventListener('click', () => {
-  if(!menuOpen) {
-    menuBtn.classList.add('open');
-    navButtons.classList.add('op');
-    menuOpen = true;
-  } else {
-    menuBtn.classList.remove('open');
-    navButtons.classList.remove('op');
-    menuOpen = false;
-  }
-});
+if ('ontouchstart' in window) {
+  menuBtn.addEventListener('touchstart', () => {
+    if(!menuOpen) {
+      menuBtn.classList.add('open');
+      navButtons.classList.add('op');
+      menuOpen = true;
+    } else {
+      menuBtn.classList.remove('open');
+      navButtons.classList.remove('op');
+      menuOpen = false;
+    }
+  });
+}
+else {
+  menuBtn.addEventListener('click', () => {
+    if(!menuOpen) {
+      menuBtn.classList.add('open');
+      navButtons.classList.add('op');
+      menuOpen = true;
+    } else {
+      menuBtn.classList.remove('open');
+      navButtons.classList.remove('op');
+      menuOpen = false;
+    }
+  });
+}
+
 
 $(document).ready(function() {
   $("#navLeft").click(function() {
@@ -75,6 +91,8 @@ $(document).ready(function() {
 // MODAL FUNCTIONS
 var modal = document.getElementsByClassName("modal");
 var btn = document.getElementsByClassName("project-image");
+
+
 // var span = document.getElementsByClassName("close")[0];
 
 //MODAL VISIBLE
