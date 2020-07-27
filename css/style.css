@@ -364,12 +364,12 @@
 
 .home-image {
     grid-area: i;
-    border: 2px solid #fff;
+    /* border: 2px solid #fff; */
     max-height: 100%;
     /* padding: 2rem; */
 }
 .home-image > img {
-    height: 99%;
+    height: 90%;
     width: 99%;
     object-fit: contain;
 }
