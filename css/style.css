@@ -9,6 +9,7 @@
     overflow: hidden;
     height: 100vh !important;
     width: inherit;
+    /* margin: 2px; */
 }
 .home-wrapper{
     grid-area: main;
@@ -17,6 +18,7 @@
     overflow-x: hidden;
     overflow-y: scroll;
     grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: ; */
     grid-template-areas:
     "t i";
 }
@@ -36,6 +38,7 @@
 .art-wrapper{
     grid-area: main;
     display: none;
+    padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
     transition: 0.6s;
@@ -50,9 +53,11 @@
     transition: 0.6s;
     overflow-x: hidden;
     overflow-y: hidden;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 0fr;
+    grid-template-rows: auto auto;
     grid-template-areas:
-    "filter list";
+    "filter"
+    "list";
     gap: 5px;
 }
 /* ----------------GENERAL WRAPPERS END HERE---------------- */
@@ -62,11 +67,10 @@
 
 @media (orientation: landscape)  and (max-height: 500px) {
     .body-wrapper {
-        grid-template-rows: 8.5fr 1fr;
-        grid-template-columns: 1.5fr 8.5fr;
+        grid-template-rows:  1fr 0fr;
+        grid-template-columns: 1fr 8fr 1fr;
         grid-template-areas:
-        'navbar main'
-        'foot foot';
+        'navbar main foot';
     }
 
     .home-wrapper {
@@ -132,6 +136,7 @@
     .home-wrapper {
         grid-template-columns: 1fr 0fr;
         grid-template-rows: 1fr 1fr;
+        padding-left: 1.5rem;
         grid-template-areas:
         "t"
         "i";
@@ -153,8 +158,9 @@
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
     /* 600px to 768px (landscape phones and small tablets) */
+    
     /* .body-wrapper {
 
     }
@@ -176,16 +182,16 @@
     } */
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (min-width: 992px) {
     /* 768px to 992px (tablets and iPads) */
+    .home-image > img {
+        /* height: auto !important; */
+        max-height: 500px !important;
+    }
     /* .body-wrapper {
 
-    }
-
-    .home-wrapper {
-
-    }
-
+    }*/ 
+/*
     .proj-wrapper {
 
     }
@@ -201,6 +207,9 @@
 
 @media only screen and (min-width: 1200px) {
     /* more than 1200px (desktops) */
+    /* .home-image > img {
+        max-height: 700px;
+    } */
     /* .body-wrapper {
 
     }
@@ -230,9 +239,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 0px; 
+    padding: 8px; 
     transition: 0.6s;
-    background: #000;
+    background-color: #2c2c2c42;
 }
 
 #navLeft {
@@ -250,7 +259,7 @@
 
 #logo {
     background-color: white;
-    background-blend-mode: screen;
+    /* background-blend-mode: screen; */
     margin: 0px;
     transition: transform 0.3s ease-in-out, background-color 0.6s ease-in-out;
 }
@@ -270,14 +279,15 @@
     font-size: 1rem;
     border-radius: 0px;
     border: 0px;
-    background-color: #000;
+    background-color: inherit;
     color: #fff;
     transition: all .5s ease-in-out;
+    
 }
 
 .navBtn button:hover {
     border-radius: 0px;
-    border: 0px;
+    /* border: 0px; */
     background-color: #777;
     color: #fff;
     cursor: pointer;
@@ -288,19 +298,21 @@
 }
 
 .active {
-    background-color: #777 !important;
+    background-color: #111 !important;
+    /* border: var(--primary-variant) solid 1px !important;
+    transition: border-width 0.6s ease-in-out; */
 }
 
 /* hamburger menu */
 .ham {
     position: absolute;
-    top: 0.5%;
+    top: 0%;
     right: 1%;
     display: none;
     justify-content: center;
     align-items: center;
-    width: 80px;
-    height: 80px;
+    width: 68px;
+    height: 68px;
     cursor: pointer;
     transition: all .5s ease-in-out;
 }
@@ -308,9 +320,9 @@
 .ham-btn {
     width: 40px;
     height: 3px;
-    background: #fff;
+    background: var(--primary-color);
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    /* box-shadow: 0 2px 5px rgba(255,101,47,.2); */
     transition: all .5s ease-in-out;
 }
 
@@ -319,9 +331,9 @@
     position: absolute;
     width: 40px;
     height: 3px;
-    background: #fff;
+    background: var(--primary-color);
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    /* box-shadow: 0 2px 5px rgba(255,101,47,.2); */
     transition: all .5s ease-in-out;
 }
 
@@ -365,12 +377,13 @@
 .home-image {
     grid-area: i;
     /* border: 2px solid #fff; */
-    max-height: 100%;
+    max-height: fit-content;
     /* padding: 2rem; */
 }
 .home-image > img {
-    height: 90%;
-    width: 99%;
+    height: 100%;
+    width: 100%;
+    max-height: 450px;
     object-fit: contain;
 }
 
@@ -568,7 +581,8 @@
     }
 
     .navBtn.op {
-        height: 50px;
+        height: 60px;
+        padding-top: 10px ;
     }
 
 
@@ -589,4 +603,53 @@
 
 
 
+.overlay-start {
+    display: block;
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 5; /* Sit on top */
+    left: 0;
+    top: 0;
+    opacity: 1;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 1); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition-delay: 2s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
 
+.overlay-content {
+    position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+
+  background: linear-gradient(270deg, #ffffff, #000000);
+    background-size: 400% 400%;
+
+    -webkit-animation: loader 5s ease infinite;
+    -moz-animation: loader 5s ease infinite;
+    animation: loader 5s ease infinite;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes loader {
+    0%{background-position:20% 50%}
+    100%{background-position:-100% 50%}
+}
+@-moz-keyframes loader {
+    0%{background-position:20% 50%}
+    100%{background-position:-100% 50%}
+}
+@keyframes loader {
+    0%{background-position:20% 50%}
+    100%{background-position:-100% 50%}
+    /* 100%{background-position:0% 50%} */
+}
+
+.overlay-start img {
+    max-width: 80vw;
+    max-height: 90vh;
+}

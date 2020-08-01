@@ -30,7 +30,14 @@ else {
 }
 
 
+
 $(document).ready(function() {
+  $(".overlay-start").css("opacity","0")
+  $(".overlay-start").delay(2500).queue(function (hid) {
+    $(this).hide(); 
+    hid();
+  });
+
   $("#navLeft").click(function() {
     $(".home-wrapper").css("display", "grid");
     $(".art-wrapper").css("display", "none");
@@ -48,6 +55,9 @@ $(document).ready(function() {
       next();
     });
     $("#logo").css("background-color", "#fff");
+    $("#blogBtn").css("color", "#fff");
+    $("#artBtn").css("color", "#fff");
+    $("#projectBtn").css("color", "#fff");
   });
 
   $("#projectBtn").click(function() {
@@ -66,7 +76,10 @@ $(document).ready(function() {
       $(this).css({'transform' : 'rotateY('+ 0 +'deg)'}); 
       next(); 
     });
-    $("#logo").css("background-color", "rgb(59, 51, 172)");
+    $("#logo").css("background-color", "#9dd7db");
+    $("#projectBtn").css("color", "#9dd7db");
+    $("#artBtn").css("color", "#fff");
+    $("#blogBtn").css("color", "#fff");
   });
   
   $("#artBtn").click(function() {
@@ -85,8 +98,10 @@ $(document).ready(function() {
       $(this).css({'transform' : 'rotateY('+ 0 +'deg)'}); 
       next(); 
     });
-    $("#logo").css("background-color", "rgb(121, 40, 155)");
-
+    $("#logo").css("background-color", "#db9dd3");
+    $("#artBtn").css("color", "#db9dd3");
+    $("#projectBtn").css("color", "#fff");
+    $("#blogBtn").css("color", "#fff");
   });
   
   $("#blogBtn").click(function() {
@@ -105,13 +120,17 @@ $(document).ready(function() {
       $(this).css({'transform' : 'rotateY('+ 0 +'deg)'}); 
       next(); 
     });
-    $("#logo").css("background-color", "rgb(170, 50, 19)");
+    $("#logo").css("background-color", "#dbda9d");
+    $("#blogBtn").css("color", "#dbda9d");
+    $("#artBtn").css("color", "#fff");
+    $("#projectBtn").css("color", "#fff");
   });
 
 });
 
 // MODAL FUNCTIONS
 var modal = document.getElementsByClassName("modal");
+var modalBox = document.getElementsByClassName("modal-box")
 var btn = document.getElementsByClassName("project-image");
 
 // var span = document.getElementsByClassName("close")[0];
@@ -204,6 +223,7 @@ if ('ontouchstart' in window) {
         if (event.target == btn[i]) {
           modal[i].style.opacity = "1";
           modal[i].style.visibility = "visible";
+          $(modalBox[i]).fadeIn();
         }
 
         if (event.target == imBtn[i]) {
@@ -228,6 +248,7 @@ else {
         if (event.target == btn[i]) {
           modal[i].style.opacity = "1";
           modal[i].style.visibility = "visible";
+          $(modalBox[i]).fadeIn(100);
         }
         if (event.target == imBtn[i]) {
           imModal[i].style.opacity = "1";
@@ -236,6 +257,7 @@ else {
         if (event.target == modal[i]) {
           modal[i].style.opacity = "0";
           modal[i].style.visibility = "hidden";
+          $(modalBox[i]).fadeOut(100);
         }
         if (event.target == imModal[i]) {
           imModal[i].style.opacity = "0";
@@ -258,3 +280,108 @@ else {
 //     }
 //   }
 // });
+
+
+
+let requestURL = '/project.json';
+let request = new XMLHttpRequest();
+request.open('GET', requestURL); 
+request.responseType = 'json';
+request.send();
+
+request.onload = function() {
+  const tit = request.response;
+  populateModal(tit);
+}
+
+function isEmptyObj(object) {
+  for (var key in object) {
+      if (object.hasOwnProperty(key)) {
+          return false;
+      }
+  }
+}
+
+function populateModal(jsonObj) {
+  const projects = jsonObj['projects'];
+  for (let i = 0; i < projects.length; i++) {
+    const projectName = document.querySelectorAll('#project-name');
+    projectName[i].textContent = projects[i].name;
+
+    const box = document.getElementsByClassName('modal-box');
+
+    // inside MODAL
+    // Project Title
+    const title = document.createElement('h2');
+    title.textContent = projects[i].name;
+    box[i].appendChild(title);
+    // Project Type
+    const type = document.createElement('h5');
+    type.textContent = projects[i].type;
+    box[i].appendChild(type);
+    // Chip tags
+    const tags = projects[i].tags;
+    const tagFrame = document.createElement('div');
+    const used = document.createElement('p');
+    used.textContent = 'Tags: ';
+    tagFrame.appendChild(used);
+    for ( let j = 0 ; j < tags.length; j++) {
+      const chips = document.createElement('div');
+      chips.classList.add('chip');
+      chips.textContent = tags[j];
+      tagFrame.appendChild(chips);
+    }
+    box[i].appendChild(tagFrame);
+
+    const inspHeader = document.createElement('h3');
+    inspHeader.textContent = "Inspirtation:";
+
+    const conceptHeader = document.createElement('h3');
+    conceptHeader.textContent = "Concept:";
+
+    const chalHeader = document.createElement('h3');
+    chalHeader.textContent = "Challenges Faced:";
+
+    const learntHeader = document.createElement('h3');
+    learntHeader.textContent = "What I learnt:";
+
+    const nextHeader = document.createElement('h3');
+    nextHeader.textContent = "What's Next:";
+
+    const inspiration = document.createElement('p');
+    inspiration.textContent = projects[i].inspiration;
+    const concept = document.createElement('p');
+    concept.textContent = projects[i].concept;
+    const challenges = document.createElement('p');
+    challenges.textContent = projects[i].challenges;
+    const learnt = document.createElement('p');
+    learnt.textContent = projects[i].learnt;
+    const next = document.createElement('pre');
+    next.textContent = projects[i].next;
+
+    if (inspiration.innerHTML !== "") {
+      box[i].appendChild(inspHeader);
+      box[i].appendChild(inspiration);
+    }
+
+    if (concept.innerHTML !== "") {
+      box[i].appendChild(conceptHeader);
+      box[i].appendChild(concept);
+    }
+    
+    if (challenges.innerHTML !== "") {
+      box[i].appendChild(chalHeader);
+      box[i].appendChild(challenges);
+    }
+
+    if (learnt.innerHTML !== "") {
+      box[i].appendChild(learntHeader);
+      box[i].appendChild(learnt);
+    }
+
+    if (next.innerHTML !== "") {
+      box[i].appendChild(nextHeader);
+      box[i].appendChild(next);
+    }
+    }
+}

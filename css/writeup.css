@@ -3,11 +3,10 @@
 .filter {
     grid-area: filter;
     display: grid;
-    grid-template-rows: 1fr 4fr 3fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
     "filterTop"
-    "filterBtns"
-    "filterBottom";
+    "filterBtns";
 }
 
 #filter-title {
@@ -24,8 +23,9 @@
     display: flex;
     overflow-y: auto;
     overflow-x: hidden;
+    height: auto;
     max-height: 270px;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: flex-start;
     /* align-items: center; */
 }
@@ -46,13 +46,13 @@
     max-height: 100%;
     outline: 0px;
 }
-
+/* 
 #filterArt {
     height: 100%;
     width: 100%;
     margin: 0px;
     background-color: lightblue;
-}
+} */
 
 .list {
     overflow-y: scroll;
@@ -66,7 +66,8 @@
 }
 
 .content {
-    background: url("/files/images/blueberries.jpg");
+    background: url("/files/images/ComingSoonImage.png");
+    background-size: contain;
     color: #fff;
     margin: 0px;
     /* margin-bottom: 2px;  */

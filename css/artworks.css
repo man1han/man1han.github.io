@@ -91,16 +91,23 @@
     width: 80%;
     height: 80%;
     padding: 2rem;
-    background-color: #00f;
+    background-color: var(--surface);
+    border: var(--primary-color) solid 3px;
+    color: var(--on-surface);
     text-align: center;
 }
 
 @media not all and (hover: none) {
+    .overlay{
+        opacity: 0;
+    }
+
+
     .masonry .brick:hover img{
         transform: scale(0.97);
     }
     
-    .brick:hover .middle {
+    .brick:hover .overlay {
         opacity: 1;
     }
     
