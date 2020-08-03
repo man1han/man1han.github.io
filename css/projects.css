@@ -119,7 +119,7 @@
 }
 
 .modal-box {
-    display: block;
+    display: none;
     position: fixed;
     overflow-y: auto;
     font-size: 1rem;

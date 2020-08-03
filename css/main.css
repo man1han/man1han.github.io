@@ -14,6 +14,8 @@
     --on-primary : #000;
     --primary-variant : #512DA8;
     --primary-variant-blue : #2d8fa8;
+    --primary-variant-pink : #a82d98;
+    --primary-variant-yellow : #a89c2d;
     --secondary-color : #F48FB1;
     --on-secondary : #000;
     --background : #121212;
@@ -35,6 +37,7 @@ body {
 
 nav {
     display: flex;
+
 }
 
 p {

@@ -29,6 +29,42 @@ else {
   });
 }
 
+const writeWrap = document.getElementById('mySidenav');
+const closer = document.getElementById('closebtn');
+const filterArrow = document.querySelector(".filter-expand")
+let filterOpen = false;
+if ('ontouchstart' in window) {
+  filterArrow.addEventListener('touchstart', () => {
+    if(!filterOpen) {
+      // filterArrow.classList.add('expanded');
+      writeWrap.style.width = "250px";
+      filterOpen = true;
+    }
+  });
+  closer.addEventListener('touchstart', () => {
+    {
+      writeWrap.style.width = "0px";
+      filterOpen = false;
+    }
+  });
+}
+else {
+  filterArrow.addEventListener('click', () => {
+    if(!filterOpen) {
+      // filterArrow.classList.add('expanded');
+      writeWrap.style.width = "250px";
+      filterOpen = true;
+      
+    }
+  });
+  closer.addEventListener('click', () => {
+    {
+      writeWrap.style.width = "0px";
+      filterOpen = false;
+    }
+  });
+}
+
 
 
 $(document).ready(function() {
@@ -167,6 +203,7 @@ var btn = document.getElementsByClassName("project-image");
 
 //IMAGE MODAL FUNCTIONS
 var imModal = document.getElementsByClassName("image-modal");
+var imModalBox = document.getElementsByClassName("image-modal-box");
 var imBtn = document.getElementsByClassName("im");
 
 //MODAL VISIBLE
@@ -196,15 +233,30 @@ var imBtn = document.getElementsByClassName("im");
 
 $("#all").click(function(){
   $(".technical, .nonTechnical").css("display", "block");
+  $("#mySidenav").width(0);
+  filterOpen = false;
+  $("#all").css("background-color", "#a89c2d");
+  $("#tech").css("background-color", "#131313");
+  $("#nonTech").css("background-color", "#131313");
 });
 
 $("#tech").click(function(){
   $(".nonTechnical").css("display", "none");
   $(".technical").css("display", "block");
+  $("#mySidenav").width(0);
+  filterOpen = false;
+  $("#tech").css("background-color", "#a89c2d");
+  $("#all").css("background-color", "#131313");
+  $("#nonTech").css("background-color", "#131313");
 });
 $("#nonTech").click(function(){
   $(".technical").css("display", "none");
   $(".nonTechnical").css("display", "block");
+  $("#mySidenav").width(0);
+  filterOpen = false;
+  $("#nonTech").css("background-color", "#a89c2d");
+  $("#tech").css("background-color", "#131313");
+  $("#all").css("background-color", "#131313");
 });
 
 // var touchEvent;
@@ -223,21 +275,24 @@ if ('ontouchstart' in window) {
         if (event.target == btn[i]) {
           modal[i].style.opacity = "1";
           modal[i].style.visibility = "visible";
-          $(modalBox[i]).fadeIn();
+          $(modalBox[i]).fadeIn(100);
         }
 
         if (event.target == imBtn[i]) {
           imModal[i].style.opacity = "1";
           imModal[i].style.visibility = "visible";
+          $(imModalBox[i]).fadeIn(100);
         }
 
         if (event.target == modal[i]) {
           modal[i].style.opacity = "0";
           modal[i].style.visibility = "hidden";
+          $(modalBox[i]).fadeOut(100);
         }
         if (event.target == imModal[i]) {
           imModal[i].style.opacity = "0";
           imModal[i].style.visibility = "hidden";
+          $(imModalBox[i]).fadeOut(100);
         }
       }
     }
@@ -253,6 +308,7 @@ else {
         if (event.target == imBtn[i]) {
           imModal[i].style.opacity = "1";
           imModal[i].style.visibility = "visible";
+          $(imModalBox[i]).fadeIn(100);
         }
         if (event.target == modal[i]) {
           modal[i].style.opacity = "0";
@@ -262,6 +318,7 @@ else {
         if (event.target == imModal[i]) {
           imModal[i].style.opacity = "0";
           imModal[i].style.visibility = "hidden";
+          $(imModalBox[i]).fadeOut(100);
         }
       }
     }
