@@ -89,10 +89,10 @@ const About = () => {
       <div className="container about__container">
         <div className="about__me">
           <p>
-            I am a passionate software developer experinced in Mobile, Web, Game and AI development. I have turned my sci-fi dream into a reality by pursuing a career in Computer Science. I aim to work on technologies that positively impact people around the world.
+            I am a passionate software developer experienced in Mobile, Web, Game and AI development. I have turned my sci-fi dream into a reality by pursuing a career in Computer Science. I aim to work on technologies that positively impact people around the world.
           </p>
           <p>
-            When I am not coding, I like playing chess, making illustrations, playing guitar, and playing video games. I enjoy Harry Potter. My favorite pokemon is Snorlax and my favorite game of all-time is God Of War (2018). 
+            When I am not coding, I like to stay current with the gaming industry by watching different genres of video games and playing some myself. On weekends, I like making sketches and playing guitar. Random likes: Harry Potter, Snorlax, Iron Man, God of War (2018).
           </p>
           {/* <a href="#contact" className='btn btn-primary'>Read More</a> */}
         </div>
