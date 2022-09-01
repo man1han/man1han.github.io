@@ -1,0 +1,222 @@
+header {
+    height: 100vh;
+    padding-top: 7rem;
+    overflow: hidden;
+    margin-left: 7rem;
+}
+
+.header__container {
+    /* text-align: right; */
+    height: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr 0.1fr;
+}
+.title {
+    margin-top: 10rem;
+    width: 100%;
+}
+.subtitle {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+/*  ================== CTA ================ */
+.cta {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1rem;
+    /* justify-content: center; */
+}
+
+/* =================== LANDING SOCIALS ================== */
+.header__socials {
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    position: absolute;
+    right: 0;
+    bottom: 3rem;
+}
+
+.header__socials::before {
+    content: '';
+    width: 1px;
+    height: 3rem;
+    background: var(--color-primary);
+}
+
+/* ======================== ME =====================*/
+.me {
+
+    background-image: url(../../assets/Developer\ activity-pana.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-height: 700px;
+    height: auto;
+    overflow: hidden;
+    padding: 0
+
+}
+
+/* ==================== SCROLL DOWN ======================= */
+.scroll__down {
+    display: none;
+    position: absolute;
+    right: -2.3rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 0.8rem;
+}
+
+/*========================== DEVICES ANIMATION =======================*/
+.devices__container {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation-name: flip-devices;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    filter: invert();
+    opacity: 0.6;
+}
+
+@keyframes flip-devices {
+    0% {
+        background-image: url(../../assets/mobile-phone.png);
+        transform: rotateY(0);
+    }
+
+    10% {
+        background-image: url(../../assets/mobile-phone.png);
+        transform: rotateY(90deg);
+    }
+    11% {
+        background-image: url(../../assets/laptop.png);
+        transform: rotateY(90deg);
+    }
+
+    20% {
+        background-image: url(../../assets/laptop.png);
+        transform: rotateY(0);
+    }
+
+    30% {
+        background-image: url(../../assets/laptop.png);
+        transform: rotateY(90deg);
+    }
+    31% {
+        background-image: url(../../assets/desktop.png);
+        transform: rotateY(90deg);
+    }
+
+    40% {
+        background-image: url(../../assets/desktop.png);
+        transform: rotateY(0);
+    }
+
+    50% {
+        background-image: url(../../assets/desktop.png);
+        transform: rotateY(90deg);
+    }
+    51% {
+        background-image: url(../../assets/website.png);
+        transform: rotateY(90deg);
+    }
+
+    60% {
+        background-image: url(../../assets/website.png);
+        transform: rotateY(0);
+    }
+
+    70% {
+        background-image: url(../../assets/website.png);
+        transform: rotateY(90deg);
+    }
+    71% {
+        background-image: url(../../assets/video-console.png);
+        transform: rotateY(90deg);
+    }
+
+    80% {
+        background-image: url(../../assets/video-console.png);
+        transform: rotateY(0);
+    }
+
+    90% {
+        background-image: url(../../assets/video-console.png);
+        transform: rotateY(90deg);
+    }
+    91% {
+        background-image: url(../../assets/mobile-phone.png);
+        transform: rotateY(90deg);
+    }
+
+    100% {
+        background-image: url(../../assets/mobile-phone.png);
+        transform: rotateY(0);
+    }
+}
+
+
+
+
+
+/* =============== MEDIA QUERIES (MEDIUM DEVICES) ============ */
+
+@media screen and (max-width: 1024px) {
+    header {
+        height: 68vh;
+    }
+    
+}
+
+/* =============== MEDIA QUERIES (SMALL DEVICES) ============ */
+
+@media screen and (max-width: 600px) {
+    header {
+        height: 100vh;
+        margin-left: unset;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title {
+        margin: 0.7rem;
+        grid-area: t;
+        width: unset;
+    }
+
+    .subtitle {
+        justify-content: center;
+    }
+
+    .cta {
+        margin-top: 0.9rem;
+        justify-content: center;
+    }
+
+    .me {
+        grid-area: m;
+    }
+
+    .header__container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 1fr;
+        grid-template-areas: 't'
+        'm';
+    }
+
+    .header__socials {
+        display: none;
+    }
+}
