@@ -14,7 +14,7 @@ const Projects = () => {
       stack: [<SiUnity />, <SiCsharp />],
       platform: 'Web, Mobile',
       desc: "Under Development - A digital take of the classic cup shuffle game",
-      ghLink: '',
+      ghLink: 'https://man1han.github.io/cmu',
     },
     {
       id: 2,
@@ -49,7 +49,7 @@ const Projects = () => {
                   </div>
                 ))}
               </div>
-              { item.ghLink === "" ? "" :<a href={item.ghLink} className='btn btn-primary' target="_blank" rel='noreferrer'>GitHub</a>}
+              { item.ghLink === "" ? "" :<a href={item.ghLink} className='btn btn-primary' target="_blank" rel='noreferrer'>More</a>}
               
             </div>
           </article>
