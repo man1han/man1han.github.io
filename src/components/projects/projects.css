@@ -1,6 +1,6 @@
 .projects__container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     width: 80% !important;
     gap: 2.5rem;
     margin-top: 3rem !important;

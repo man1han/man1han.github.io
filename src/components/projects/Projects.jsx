@@ -2,7 +2,7 @@ import React from 'react'
 import './projects.css'
 // import PI from '../../assets/qr_overlay.png'
 import { useNav } from '../../hooks/useNav'
-import { SiCsharp, SiFlutter, SiUnity, SiCss3, SiReact } from 'react-icons/si'
+import { SiCsharp, SiFlutter, SiUnity, SiCss3, SiReact, SiJavascript, SiHtml5 } from 'react-icons/si'
 import {AiFillGithub} from 'react-icons/ai'
 
 const Projects = () => {
@@ -31,6 +31,14 @@ const Projects = () => {
       platform: 'Web',
       desc: 'This webpage developed using React.',
       ghLink: 'https://github.com/man1han/man1han.github.io',
+    },
+    {
+      id: 4,
+      title: 'Mood Vault',
+      stack: [<SiJavascript />, <SiCss3 />, <SiHtml5 />],
+      platform: 'Web',
+      desc: 'Mood Vault is a powerful Google Chrome extension that provides an intuitive and seamless way for creative minds to create and manage mood boards effortlessly',
+      ghLink: 'https://chrome.google.com/webstore/detail/mood-vault/fdnlmnoceadijklmomfedckgjdclacgo',
     },
   ]
   return (

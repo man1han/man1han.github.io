@@ -11,10 +11,10 @@ const Blog = () => {
       company: 'PRACSYS, Rutgers University',
       location: 'New Brunswick, NJ',
       start: 'May \'22',
-      end: 'Present',
+      end: 'Dec \'22',
       description: [
-        '- Assisting in benchmarking using the ML4KP library for kinodynamic planners under the guidance of Prof. Kostas Bekris.',
-        '- Testing the DIRT algorithm against other state-of-the-art algorithms for comparing and potentially improving its performance on the established benchmarks.',
+        '- Conducted benchmarking using the ML4KP library for kinodynamic planners, analyzing the performance of the DIRT algorithm against state-of-the-art alternatives.',
+        '- Developed a website using Jekyll to showcase bibtex lists, meeting lab requirements and enhancing research dissemination.',
       ],
     },
     {
@@ -23,12 +23,12 @@ const Blog = () => {
       company: 'HackRU, Rutgers University',
       location: 'New Brunswick, NJ',
       start: 'Aug \'21',
-      end: 'Present',
+      end: 'May \'23',
       description: [
-        '- Led the mobile development team for the cross-platform application used by 250+ participants, mentors, organizers, and sponsors at the Rutgers Hackathon.',
-        '- Implemented a QR scanning feature for a 30% faster check-in process.',
-        '- Expanded the cross-platform capabilities to web-browsers for ease-of-access.',
-        '- Added day-of features such as slack announcements, event schedule, map, etc.',
+        '- Led a team of 2 developers in creating a cross-platform application used by 300+ participants, mentors, organizers, and sponsors during the Rutgers Hackathon.',
+        '- Implemented a QR scanning feature that reduced the check-in process time by 30%, resulting in faster and more efficient event entry for participants.',
+        '- Extended app accessibility by integrating web-browsing capabilities, resulting in a 20% increase in user engagement.',
+        '- Enhanced app functionality with day-of features including slack announcements, event schedules, and maps, resulting in a 90% positive feedback from users.',
       ],
     },
     {
@@ -37,7 +37,7 @@ const Blog = () => {
       company: 'LCSR, Rutgers University',
       location: 'New Brunswick, NJ',
       start: 'Oct \'19',
-      end: 'Present',
+      end: 'May \'23',
       description: [
         '- Provide basic operational support for the departments of Computer Science, Mathematics and Statistics at Rutgers University through the ticketing system.',
         '- Administer 50+ Linux servers and computers for regularly monitoring basic operations and perform Tier 1 troubleshooting and maintenance if necessary.',
