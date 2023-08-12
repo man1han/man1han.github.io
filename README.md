@@ -1,2 +1,2 @@
 # man1han.github.io
-Portfolio website
+Portfolio website developed in React
