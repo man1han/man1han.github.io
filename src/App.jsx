@@ -1,26 +1,39 @@
 import React from 'react'
-import Landing from './components/landing/Landing'
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+} from "react-router-dom";
+import Landing from './pages/landing/Landing'
 import Navbar from './components/navbar/Navbar'
-import About from './components/about/About'
-// import Skills from './components/skills/Skills'
-import Projects from './components/projects/Projects'
-import Blog from './components/blog/Blog'
-import Contact from './components/contact/Contact'
-import NavProvider from './context/NavContext'
+import About from './pages/about/About'
+import Projects from './pages/projects/Projects'
+import Artworks from './pages/artworks/Artworks'
+import Writings from './pages/writings/Writings'
+// import NavProvider from './context/NavContext'
 
 const App = () => {
     return (
-        <div>
-            <NavProvider>
-                <Navbar />
-                <Landing />
-                <About />
-                <Blog />
-                {/* <Skills /> */}
-                <Projects />
-                <Contact />
-            </NavProvider>
-        </div>
+        <Router>
+            <Navbar/>
+            <Routes>
+                <Route exact path="/" element={<Landing/>}/>
+                <Route path="/about" element={<About/>}/>
+                <Route path="/projects" element={<Projects/>}/>
+                <Route path="/artworks" element={<Artworks/>}/>
+                <Route path="/writings" element={<Writings/>}/>
+            </Routes>
+        </Router>
+        // <>
+        //     <NavProvider>
+        //         <Navbar />
+        //         <Landing />
+        //         <About />
+        //         <Blog />
+        //         <Projects />
+        //         <Contact />
+        //     </NavProvider>
+        // </>
     )
 }
 
