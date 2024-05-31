@@ -82,9 +82,9 @@ const About = () => {
       name: 'Blender',
     },
   ]
-  const aboutRef = useNav("About")
+  // const aboutRef = useNav("About")
   return (
-    <section ref={aboutRef} id='about'>
+    <section  id='about'>
       <h2>About me</h2>
       <div className="container about__container">
         <div className="about__me">

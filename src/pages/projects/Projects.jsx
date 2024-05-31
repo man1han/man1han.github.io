@@ -6,7 +6,7 @@ import { SiCsharp, SiFlutter, SiUnity, SiCss3, SiReact, SiJavascript, SiHtml5 } 
 import {AiFillGithub} from 'react-icons/ai'
 
 const Projects = () => {
-  const projectsRef = useNav("Projects")
+  // const projectsRef = useNav("Projects")
   const projects = [
     {
       id: 1,
@@ -42,7 +42,7 @@ const Projects = () => {
     },
   ]
   return (
-    <section ref={projectsRef} id='projects'>
+    <section  id='projects'>
       <h2>Projects</h2>
       <div className="container projects__container">
         {projects.map((item, index) => (

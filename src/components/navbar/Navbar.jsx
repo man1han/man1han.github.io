@@ -4,7 +4,7 @@ import './navbar.css'
 // import { BiBriefcase } from 'react-icons/bi'
 // import { NavContext } from '../../context/NavContext'
 // import { useContext } from 'react';
-// import LogoWhite from '../../assets/LogoMBWhite.png'
+import LogoWhite from '../../assets/LogoMBWhite.png'
 import { Nav, NavLink, NavMenu } from "./NavbarElements";
 
 
@@ -18,20 +18,21 @@ const Navbar = () => {
   return (
     <>
       <Nav>
+        <div className="logo"><img src={LogoWhite} alt="" /></div>
         <NavMenu>
-          <NavLink to="/" activeStyle>
+          <NavLink to="/" >
             Home
           </NavLink>
-          <NavLink to="/about" activeStyle>
+          <NavLink to="/about" >
             About
           </NavLink>
-          <NavLink to="/projects" activeStyle>
+          <NavLink to="/projects" >
             Projects
           </NavLink>
-          <NavLink to="/artworks" activeStyle>
+          <NavLink to="/artworks" >
             Artworks
           </NavLink>
-          <NavLink to="/writings" activeStyle>
+          <NavLink to="/writings" >
             Writings
           </NavLink>
         </NavMenu>

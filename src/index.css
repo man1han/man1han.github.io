@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 
 * {
     margin: 0;
@@ -11,18 +11,20 @@
 }
 
 :root {
-    --color-bg: #1f1f38;
-    --color-bg-variant: #434343;
-    --color-primary: #c69d84;
-    --color-primary-variant: #7d5d49;
-    --color-white: #fff;
-    --color-light: rgba(255, 255, 255, 0.6);
+    --color-black: #0C1417;
+    --color-secondary: #1D627A;
+    --color-secondary-variant: #52A2BF;
+    --color-primary: #AB8D6D;
+    --color-primary-variant: #F2DCC4;
+    --color-white: #F2F0E7;
 
     --transition: all 400ms ease;
 
     --container-width-lg: 80%;
     --container-width-md: 86%;
     --container-width-sm: 90%;
+
+    --font-headers: 
 }
 
 html {

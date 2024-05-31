@@ -6,9 +6,9 @@ import Devices from './Devices'
 import { useNav } from '../../hooks/useNav'
 
 const Landing = () => {
-  const landingRef = useNav("Landing")
+  // const landingRef = useNav("Landing")
   return (
-    <header ref={landingRef} id='landing'>
+    <header  id='landing'>
       <div className="container header__container">
         <div className='title'>
           <h1>Manthan Bhatt</h1>
