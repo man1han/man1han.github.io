@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 
 * {
     margin: 0;
@@ -24,7 +26,8 @@
     --container-width-md: 86%;
     --container-width-sm: 90%;
 
-    --font-headers: 
+    --font-headers: "Abril Fatface", serif;
+    --font-body: "Lato", sans-serif;
 }
 
 html {
@@ -37,7 +40,7 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
     /* background: var(--color-bg); */
     color: var(--color-white);
     line-height: 1.7;

@@ -5,7 +5,8 @@ import './navbar.css'
 // import { NavContext } from '../../context/NavContext'
 // import { useContext } from 'react';
 import LogoWhite from '../../assets/LogoMBWhite.png'
-import { Nav, NavLink, NavMenu } from "./NavbarElements";
+
+import { NavLink } from "react-router-dom";
 
 
 
@@ -16,28 +17,54 @@ const Navbar = () => {
 
   // }
   return (
-    <>
-      <Nav>
-        <div className="logo"><img src={LogoWhite} alt="" /></div>
-        <NavMenu>
-          <NavLink to="/" >
-            Home
-          </NavLink>
-          <NavLink to="/about" >
-            About
-          </NavLink>
-          <NavLink to="/projects" >
-            Projects
-          </NavLink>
-          <NavLink to="/artworks" >
-            Artworks
-          </NavLink>
-          <NavLink to="/writings" >
-            Writings
-          </NavLink>
-        </NavMenu>
-      </Nav>
-    </>
+    <nav>
+
+      <div className="logo">
+        <img src={LogoWhite} alt="" />
+      </div>
+      <div className='navlinks'>
+        <NavLink to="/" className='navlink'>
+          Home
+        </NavLink>
+        <NavLink to="/about" className='navlink'>
+          About
+        </NavLink>
+        <NavLink to="/projects" className='navlink'>
+          Projects
+        </NavLink>
+        <NavLink to="/artworks" className='navlink'>
+          Artworks
+        </NavLink>
+        <NavLink to="/writings" className='navlink'>
+          Writings
+        </NavLink>
+      </div>
+    </nav>
+
+    /* <>
+    <Nav>
+      <div className="logo"><img src={LogoWhite} alt="" /></div>
+      <NavMenu>
+        <NavLink to="/" >
+          Home
+        </NavLink>
+        <NavLink to="/about" >
+          About
+        </NavLink>
+        <NavLink to="/projects" >
+          Projects
+        </NavLink>
+        <NavLink to="/artworks" >
+          Artworks
+        </NavLink>
+        <NavLink to="/writings" >
+          Writings
+        </NavLink>
+      </NavMenu>
+    </Nav>
+    </> */
+
+    // nav - navlinks - navlink
 
     // <nav>
     //   <div className="logo"><img src={LogoWhite} alt="" /></div>

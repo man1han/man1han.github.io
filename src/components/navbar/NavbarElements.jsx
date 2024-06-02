@@ -48,9 +48,12 @@ export const Bars = styled(FaBars)`
 
 export const NavMenu = styled.div`
     display: flex;
-    align-items: center;
-    margin-right: -24px;
-    
+    // align-items: center;
+    // margin-right: -24px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    // backdrop-filter: blur(15px);
+    width: 7rem;
     @media screen and (max-width: 768px) {
         display: none;
     }

@@ -11,10 +11,10 @@ nav {
     flex-direction: column;
     justify-content: space-evenly;
     backdrop-filter: blur(15px);
-    width: 7rem;
+    width: 18rem;
 }
 
-nav button:not(.activeClass) {
+nav .navlink:not(.active) {
     background: transparent;
     padding: 0.8rem;
     border-radius: 50%;
@@ -23,11 +23,12 @@ nav button:not(.activeClass) {
     font-size: 1.7rem;
 }
 
-nav button:not(.activeClass):hover {
-    background: rgba(0,0,0,0.4);
+nav .navlink:not(.active):hover {
+    background: var(--color-primary);
+    color: var(--color-secondary);
 }
 
-nav button.activeClass {
+nav .navlink.active {
     padding: 0.8rem;
     border-radius: 50%;
     display: flex;
