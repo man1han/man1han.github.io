@@ -1,9 +1,9 @@
 import React from 'react'
 import './navbar.css'
-// import { AiOutlineHome, AiOutlineUser, AiOutlineCode, AiOutlineMessage } from 'react-icons/ai'
-// import { BiBriefcase } from 'react-icons/bi'
-// import { NavContext } from '../../context/NavContext'
-// import { useContext } from 'react';
+// import { AiOutlineHome, AiOutlineUser, AiOutlineCode } from 'react-icons/ai'
+import { BiPalette, BiPen, BiCodeBlock, BiHome, BiUser } from 'react-icons/bi'
+import { AiFillInstagram, AiFillLinkedin, AiFillGithub } from 'react-icons/ai'
+import { MdEmail } from 'react-icons/md'
 import LogoWhite from '../../assets/LogoMBWhite.png'
 
 import { NavLink } from "react-router-dom";
@@ -11,70 +11,48 @@ import { NavLink } from "react-router-dom";
 
 
 const Navbar = () => {
-  // const { activeLinkId } = useContext(NavContext);
-  // const handleNavClick = (selectedId) => {
-  //   document.getElementById(selectedId).scrollIntoView({ behavior: 'smooth' })
-
-  // }
   return (
     <nav>
-
-      <div className="logo">
-        <img src={LogoWhite} alt="" />
+      <div>
+        <div className="logo">
+          <img src={LogoWhite} alt="" />
+        </div>
+        <div className='navlinks'>
+          <NavLink to="/" className='navlink'>
+            <div className='navLogo'><BiHome /></div>
+            Home
+          </NavLink>
+          <NavLink to="/about" className='navlink'>
+            <div className='navLogo'><BiUser /></div>
+            About
+          </NavLink>
+          <NavLink to="/projects" className='navlink'>
+            <div className='navLogo'><BiCodeBlock /></div>
+            Projects
+          </NavLink>
+          <NavLink to="/artworks" className='navlink'>
+            <div className='navLogo'><BiPalette /></div>
+            Artworks
+          </NavLink>
+          <NavLink to="/writings" className='navlink'>
+            <div className='navLogo'><BiPen /></div>
+            Writings
+          </NavLink>
+        </div>
       </div>
-      <div className='navlinks'>
-        <NavLink to="/" className='navlink'>
-          Home
-        </NavLink>
-        <NavLink to="/about" className='navlink'>
-          About
-        </NavLink>
-        <NavLink to="/projects" className='navlink'>
-          Projects
-        </NavLink>
-        <NavLink to="/artworks" className='navlink'>
-          Artworks
-        </NavLink>
-        <NavLink to="/writings" className='navlink'>
-          Writings
-        </NavLink>
+
+      <div className='socials_section'>
+        <div className='socials_header'>Socials</div>
+        <div className='socials_links'>
+          <a href='https://linkedin.com/in/man1han' target="_blank" rel='noreferrer'><AiFillLinkedin /></a>
+          <a href='https://github.com/man1han' target="_blank" rel='noreferrer'><AiFillGithub /></a>
+          <a href='https://instagram.com/manthanbhattt' target="_blank" rel='noreferrer'><AiFillInstagram /></a>
+          <a href='mailto: manthanbhatt2509@gmail.com' target="_blank" rel='noreferrer'><MdEmail /></a>
+        </div>
+
       </div>
     </nav>
 
-    /* <>
-    <Nav>
-      <div className="logo"><img src={LogoWhite} alt="" /></div>
-      <NavMenu>
-        <NavLink to="/" >
-          Home
-        </NavLink>
-        <NavLink to="/about" >
-          About
-        </NavLink>
-        <NavLink to="/projects" >
-          Projects
-        </NavLink>
-        <NavLink to="/artworks" >
-          Artworks
-        </NavLink>
-        <NavLink to="/writings" >
-          Writings
-        </NavLink>
-      </NavMenu>
-    </Nav>
-    </> */
-
-    // nav - navlinks - navlink
-
-    // <nav>
-    //   <div className="logo"><img src={LogoWhite} alt="" /></div>
-    //   <button className={activeLinkId === 'Landing' ? 'activeClass' : ""} onClick={()=> handleNavClick('landing')}><AiOutlineHome/></button>
-    //   <button className={activeLinkId === 'About' ? 'activeClass' : ""} onClick={()=> handleNavClick('about')}><AiOutlineUser/></button>
-    //   <button className={activeLinkId === 'Blog' ? 'activeClass' : ""} onClick={()=> handleNavClick('blog')}><BiBriefcase/></button>
-    //   {/* <button className={activeLinkId === 'Skills' ? 'activeClass' : ""} onClick={()=> handleNavClick('skills')}><AiOutlineTool/></button> */}
-    //   <button className={activeLinkId === 'Projects' ? 'activeClass' : ""} onClick={()=> handleNavClick('projects')}><AiOutlineCode/></button>
-    //   <button className={activeLinkId === 'Contact' ? 'activeClass' : ""} onClick={()=> handleNavClick('contact')}><AiOutlineMessage/></button>
-    // </nav>
   )
 }
 

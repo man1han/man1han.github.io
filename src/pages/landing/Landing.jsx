@@ -1,28 +1,27 @@
 import React from 'react'
 import './landing.css'
-import CTA from './CTA'
-import LandingSocials from './LandingSocials'
-import Devices from './Devices'
-import { useNav } from '../../hooks/useNav'
+import Resume from '../../assets/Resume-Manthan.pdf'
+import { AiOutlineDownload } from 'react-icons/ai'
+import Featured from './Featured'
+
 
 const Landing = () => {
-  // const landingRef = useNav("Landing")
   return (
-    <header  id='landing'>
-      <div className="container header__container">
-        <div className='title'>
-          <h1>Manthan Bhatt</h1>
-          <div className="subtitle">
-            <h3 className='text-light'>Software Developer</h3>
-            <Devices />
-          </div>
-          <CTA />
-        </div>
-        <div className="me">
-        </div>
-        <LandingSocials />
+    <div className='landing__container' id='landing'>
+      <div className='featured__container'>
+        <Featured/>
       </div>
-    </header>
+      <div className="intro__container">
+        <div className='title'>
+          <h1>Hi, I'm Manthan.</h1>
+          <h1>A <span className='versatile'>Versatile</span> Programmer.</h1>
+          <h3 className='text-light'>With a strong background in various programming languages and technologies.<br />I am passionate about creating creative solutions and learning new skills.</h3>
+          <div className="cta">
+            <a href={Resume} download className='btn btn-secondary'>Resume <AiOutlineDownload style={{ fontSize: '2rem', display:'flex' }} /></a>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 

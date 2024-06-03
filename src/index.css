@@ -14,11 +14,24 @@
 
 :root {
     --color-black: #0C1417;
-    --color-secondary: #1D627A;
-    --color-secondary-variant: #52A2BF;
+    --color-white: #F2F0E7;
+
     --color-primary: #AB8D6D;
     --color-primary-variant: #F2DCC4;
-    --color-white: #F2F0E7;
+
+    --color-secondary: #1D627A;
+    --color-secondary-variant: #52A2BF;
+
+    /* RGB value strings for alpha value manipulation */
+    --rgb-black: 12, 20, 23;
+    --rgb-white: 242, 240, 231;
+
+    --rgb-primary: 171, 141, 109;
+    --rgb-primary-variant: 242, 220, 196;
+
+    --rgb-secondary: 29, 98, 122;
+    --rgb-secondary-variant: 82, 162, 191;
+
 
     --transition: all 400ms ease;
 
@@ -41,18 +54,16 @@ html {
 
 body {
     font-family: var(--font-body);
-    /* background: var(--color-bg); */
     color: var(--color-white);
-    line-height: 1.7;
-    background: #000000;
+    line-height: 1.5;
+    background: var(--color-black);
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #303030, #000000);
+    background: -webkit-linear-gradient(to right, var(--color-black), #000000);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #303030, #000000);
+    background: linear-gradient(to right, var(--color-black), #000000);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-repeat: no-repeat;
     background-attachment: fixed;
-
 }
 
 /* ================= GENERAL STYLES =================== */
@@ -67,11 +78,15 @@ h2,
 h3,
 h4,
 h5 {
-    font-weight: 300;
+    font-weight: 400;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-family: var(--font-headers);
+    letter-spacing: 2px;
+    font-size: 6rem;
+    font-weight: 400;
+    line-height: 1;
 }
 
 section {
@@ -98,11 +113,12 @@ section>h2 {
 }
 
 .text-light {
-    color: var(--color-light);
+    color: var(--color-primary);
+    font-weight: 300;
 }
 
 a {
-    color: var(--color-primary);
+    color: var(--color-primary-variant);
     transition: var(--transition);
 }
 
@@ -112,26 +128,26 @@ a:hover {
 
 .btn {
     width: max-content;
-    display: inline-flex;
-    color: var(--color-primary);
+    display: flex;
+    color: var(--color-white);
     gap: 0.3rem;
     align-items: center;
     padding: 0.75rem 1.2rem;
-    border-radius: 0.4rem;
+    border-radius: 0.6rem;
     cursor: pointer;
-    border: 1px solid var(--color-primary);
+    border: 2px solid var(--color-secondary-variant);
     transition: var(--transition);
+    /* background: var(--color-secondary); */
 }
 
 .btn:hover {
-    background: var(--color-white);
-    color: var(--color-bg);
+    background: var(--color-secondary-variant);
+    /* color: var(--color-primary-variant); */
     border-color: transparent;
 }
 
-.btn-primary {
-    background: var(--color-primary);
-    color: var(--color-bg);
+.btn-secondary {
+    background: var(--color-secondary);
 }
 
 img {
@@ -163,6 +179,7 @@ img {
     .container {
         width: var(--container-width-sm);
     }
+
     section {
         height: max-content;
         min-height: 100vh;

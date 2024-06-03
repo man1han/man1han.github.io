@@ -10,7 +10,6 @@ import About from './pages/about/About'
 import Projects from './pages/projects/Projects'
 import Artworks from './pages/artworks/Artworks'
 import Writings from './pages/writings/Writings'
-// import NavProvider from './context/NavContext'
 
 const App = () => {
     return (
@@ -24,16 +23,6 @@ const App = () => {
                 <Route path="/writings" element={<Writings/>}/>
             </Routes>
         </Router>
-        // <>
-        //     <NavProvider>
-        //         <Navbar />
-        //         <Landing />
-        //         <About />
-        //         <Blog />
-        //         <Projects />
-        //         <Contact />
-        //     </NavProvider>
-        // </>
     )
 }
 
