@@ -2,8 +2,6 @@ import React, { useEffect, useState, useCallback } from "react";
 // import Carousel from "react-spring-3d-carousel";
 import Carroussel from "./Carousel";
 import { v4 as uuidv4 } from "uuid";
-import { config } from "react-spring";
-import Card from "./Card";
 
 const Featured = () => {
   let cards = [
