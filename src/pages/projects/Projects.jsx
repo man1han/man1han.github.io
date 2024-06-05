@@ -1,7 +1,6 @@
 import React from 'react'
 import './projects.css'
 // import PI from '../../assets/qr_overlay.png'
-import { useNav } from '../../hooks/useNav'
 import { SiCsharp, SiFlutter, SiUnity, SiCss3, SiReact, SiJavascript, SiHtml5 } from 'react-icons/si'
 import {AiFillGithub} from 'react-icons/ai'
 

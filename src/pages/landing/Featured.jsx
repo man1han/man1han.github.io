@@ -1,76 +1,60 @@
-import React, { useEffect, useState } from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
-import { FaArrowLeft, FaArrowRight  } from "react-icons/fa";
-
+import React, { useEffect, useState, useCallback } from "react";
+// import Carousel from "react-spring-3d-carousel";
+import Carroussel from "./Carousel";
+import { v4 as uuidv4 } from "uuid";
+import { config } from "react-spring";
+import Card from "./Card";
 
 const Featured = () => {
-    const data = ["1", "2", "3"]
-    const [currentIndex, setCurrentIndex] = useState(0)
-    const carouselInfiniteScroll = () => {
-        if (currentIndex === data.length - 1) {
-            return setCurrentIndex(0)
-        }
-        return setCurrentIndex(currentIndex + 1)
+  let cards = [
+    {
+      key: uuidv4(),
+      content: (
+        <div>1</div>
+      )
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <div>2</div>
+      )
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <div>3</div>
+      )
     }
+  ];
 
-    useEffect(() => {
-        const interval = setInterval(() => { carouselInfiniteScroll() }, 3000)
-        return () => clearInterval(interval)
-    })
-    return (
-        <div className="container">
-            <h1 className="heading">Featured</h1>
-            <Swiper
-                effect={'coverflow'}
-                grabCursor={true}
-                centeredSlides={true}
-                loop={true}
-                slidesPerView={'auto'}
-                coverflowEffect={{
-                    rotate: 10,
-                    stretch: 0,
-                    depth: 100,
-                    modifier: 1,
-                }}
-                pagination={{ el: '.swiper-pagination', clickable: true }}
-                navigation={{
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                    clickable: true,
-                }}
-                modules={[EffectCoverflow, Pagination, Navigation]}
-                className="swiper_container"
-            >
-                {data.map((item, index) => {
-                    return <SwiperSlide key={index}>
-                        <div className='featured_card'>{item}</div>
-                    </SwiperSlide>
-                })}
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-                <div className="slider-controler">
-                    <div className="swiper-button-prev slider-arrow">
-                        <FaArrowLeft/>
-                    </div>
-                    <div className="swiper-button-next slider-arrow">
-                        <FaArrowRight/>
-                    </div>
-                    <div className="swiper-pagination"></div>
-                </div>
-            </Swiper>
-        </div>
-        /*  <div className='carousel__container'>
-              {data.map((item, index) => {
-                  return <h1 className='carousel_item'  style={{ transform: `translate(-${currentIndex*100}%)` }} key={index}>
-                      {item}
-                  </h1>
-              })}
-          </div> */
-    )
+  const nextSlide = useCallback(() => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % cards.length);
+  }, [cards.length]);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      nextSlide();
+    }, 2000); // Change slide every 2 seconds
+    return () => {
+      clearInterval(timer);
+    };
+  }, [nextSlide]);
+
+  return (
+    <div className="">
+      <Carroussel
+        cards={cards}
+        height="20rem"
+        width="30%"
+        margin="0 auto"
+        offset={2}
+        showArrows={false}
+        goToSlide={currentSlide}
+      />
+    </div>
+  );
 }
 
-export default Featured
+export default Featured;

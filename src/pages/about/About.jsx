@@ -1,6 +1,5 @@
 import React from 'react'
 import './about.css'
-import { useNav } from '../../hooks/useNav'
 import { SiPython, SiCsharp, SiC, SiCplusplus, SiJavascript, SiFlutter, SiUnity, SiBlender, SiUnrealengine, SiJekyll, SiCss3, SiJava, SiReact, SiHtml5 } from 'react-icons/si'
 import { GrMysql } from 'react-icons/gr'
 
