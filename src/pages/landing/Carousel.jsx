@@ -4,7 +4,7 @@ import { config } from "react-spring";
 
 export default function Carroussel(props) {
   const table = props.cards.map((element, index) => {
-    return { ...element, onClick: () => setGoToSlide(index) };
+    return { ...element, onClick: () => props.onSlideClick(index) };
   });
 
   const [offsetRadius, setOffsetRadius] = useState(2);
@@ -28,7 +28,7 @@ export default function Carroussel(props) {
         goToSlide={goToSlide}
         offsetRadius={offsetRadius}
         showNavigation={showArrows}
-        animationConfig={config.slow}
+        animationConfig={config.gentle}
       />
     </div>
   );
