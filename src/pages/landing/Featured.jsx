@@ -1,22 +1,42 @@
 import React, { useEffect, useState, useCallback, useRef } from "react";
-import Carroussel from "./Carousel";
+import Carroussel from "../../components/featured/Carousel";
+import FeaturedCard from "../../components/featured/FeaturedCard";
 import { v4 as uuidv4 } from "uuid";
 
+// Array of project data
+const projects = [
+  {
+    image: 'https://placehold.co/600x400/000000/FFF',
+    title: 'Project One',
+    description: 'This is a brief description of Project One.',
+    link: 'https://example.com/project-one'
+  },
+  {
+    image: 'https://placehold.co/600x400/000000/FFF',
+    title: 'Project Two',
+    description: 'This is a brief description of Project Two.',
+    link: 'https://example.com/project-two'
+  },
+  {
+    image: 'https://placehold.co/600x400/000000/FFF',
+    title: 'Project Three',
+    description: 'This is a brief description of Project Three.',
+    link: 'https://example.com/project-three'
+  },
+];
+
 const Featured = () => {
-  let cards = [
-    {
-      key: uuidv4(),
-      content: <div>1</div>,
-    },
-    {
-      key: uuidv4(),
-      content: <div>2</div>,
-    },
-    {
-      key: uuidv4(),
-      content: <div>3</div>,
-    },
-  ];
+  const cards = projects.map((project) => ({
+    key: uuidv4(),
+    content: (
+      <FeaturedCard
+        image={project.image}
+        title={project.title}
+        description={project.description}
+        link={project.link}
+      />
+    ),
+  }));
 
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -48,17 +68,18 @@ const Featured = () => {
   };
 
   return (
-    <div className="">
-      <Carroussel
+    <div >
+      {/* <h3 className="heading">Featured</h3> */}
+      {/* <Carroussel
         cards={cards}
-        height="20rem"
-        width="30%"
+        height="50rem"
+        width="100%"
         margin="0 auto"
         offset={2}
         showArrows={false}
         goToSlide={currentSlide}
         onSlideClick={handleSlideClick}
-      />
+      /> */}
     </div>
   );
 };
