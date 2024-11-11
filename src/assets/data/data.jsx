@@ -2,6 +2,53 @@ import React from "react";
 import { SiPython, SiCsharp, SiC, SiCplusplus, SiJavascript, SiFlutter, SiUnity, SiBlender, SiUnrealengine, SiGooglecloud, SiCss3, SiJava, SiReact, SiHtml5, SiAdobephotoshop } from 'react-icons/si'
 import { GrMysql } from 'react-icons/gr'
 import { FaAws, FaAngular } from "react-icons/fa";
+import moodVault from '../projectImages/moodVault.png';
+import oneApp from '../projectImages/OneApp.png';
+import donut from '../artworkImages/donut.png';
+import inpainting from '../blogImages/inpainting.png'
+
+
+export const featuredProjects = [
+    {
+        id: 1,
+        title: 'Mood Vault',
+        description: 'A google chrome extension to save mood boards for all your creative needs.',
+        image: moodVault,
+        link: 'https://example.com/project-one'
+    },
+    {
+        id: 2,
+        title: 'OneApp',
+        description: 'The official app used at HackRU for check-in and other day-of needs',
+        image: oneApp,
+        link: 'https://example.com/project-one'
+    }]
+export const featuredArtwork = [
+    {
+        id: 1,
+        title: 'Donut try this at home',
+        description: 'The “hello world” of 3D modeling in Blender.',
+        image: donut,
+        link: 'https://example.com/project-two'
+    }]
+export const featuredBlog = [
+    {
+        id: 4,
+        title: 'In-painting using Machine Learning',
+        description: 'Filling the pot holes in images using the artificially intelligent cement.',
+        image: inpainting,
+        link: 'https://example.com/project-three'
+    },
+]
+
+
+
+
+
+
+
+
+
 
 const techStack = [
     {
@@ -187,32 +234,7 @@ const certifications = [
     },
 ]
 
-const featuredCards = [
-    {
-        id: 1,
-        section: 'Projects',
-        title: 'Project One',
-        description: 'This is a brief description of Project One.',
-        image: 'https://placehold.co/600x400/000000/FFF',
-        link: 'https://example.com/project-one'
-    },
-    {
-        id: 2,
-        section: 'Artworks',
-        title: 'Project Two',
-        description: 'This is a brief description of Project Two.',
-        image: 'https://placehold.co/600x400/000000/FFF',
-        link: 'https://example.com/project-two'
-    },
-    {
-        id: 3,
-        section: 'Writings',
-        title: 'Project Three',
-        description: 'This is a brief description of Project Three.',
-        image: 'https://placehold.co/600x400/000000/FFF',
-        link: 'https://example.com/project-three'
-    },
-]
+
 
 const projectCards = [
     {

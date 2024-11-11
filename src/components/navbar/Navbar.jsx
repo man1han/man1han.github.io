@@ -1,37 +1,33 @@
 import React from 'react'
 import './navbar.css'
 import { NavLink } from "react-router-dom";
-import { BiPalette, BiPen, BiCodeBlock, BiHome, BiUser } from 'react-icons/bi'
 
 import Socials from '../Socials';
 
 const Navbar = () => {
   return (
     <nav>
-      <Socials />
 
+      <h3>Manthan<br/> Bhatt</h3>
+      <p>Software Developer</p>
       <div className='navlinks'>
         <NavLink to="/" className='navlink'>
-          <div className='navLogo'><BiHome /></div>
-          Home
+          <h5>home</h5>
         </NavLink>
         <NavLink to="/about" className='navlink'>
-          <div className='navLogo'><BiUser /></div>
-          About
+          <h5>about</h5>
         </NavLink>
         <NavLink to="/projects" className='navlink'>
-          <div className='navLogo'><BiCodeBlock /></div>
-          Projects
+          <h5>projects</h5>
         </NavLink>
         <NavLink to="/artworks" className='navlink'>
-          <div className='navLogo'><BiPalette /></div>
-          Artworks
+          <h5>artwork</h5>
         </NavLink>
         <NavLink to="/writings" className='navlink'>
-          <div className='navLogo'><BiPen /></div>
-          Writings
+          <h5>blog</h5>
         </NavLink>
       </div>
+      <Socials />
     </nav >
 
   )

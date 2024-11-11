@@ -19,8 +19,8 @@
     --color-black: #00171F;
     --color-white: #DFE7ED;
 
-    --color-primary: 	#29738e;
-    --color-primary-variant: 	#5f96aa;
+    --color-primary: #29738e;
+    --color-primary-variant: #5f96aa;
 
     --color-secondary: #f1e5d7;
     --color-secondary-variant: #7f6f62;
@@ -29,11 +29,11 @@
     --rgb-black: 0, 23, 31;
     --rgb-white: 223, 231, 237;
 
-    --rgb-primary: 41,115,142;
-    --rgb-primary-variant: 95,150,170;
+    --rgb-primary: 41, 115, 142;
+    --rgb-primary-variant: 95, 150, 170;
 
-    --rgb-secondary: 241,229,215;
-    --rgb-secondary-variant: 127,111,98;
+    --rgb-secondary: 241, 229, 215;
+    --rgb-secondary-variant: 127, 111, 98;
 
 
     --transition: all 400ms ease;
@@ -49,6 +49,7 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    background: var(--color-black);
 }
 
 ::-webkit-scrollbar {
@@ -58,10 +59,8 @@ html {
 body {
     font-family: var(--font-body);
     font-weight: 400;
-    color: var(--color-white);
+    color: var(--color-secondary);
     line-height: 1.5;
-    background: var(--color-black);
-    background: -webkit-linear-gradient(to right, var(--color-black), #000000);
     background: linear-gradient(to right, var(--color-black), #000000);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -71,12 +70,17 @@ body {
 
 .container {
     width: var(--container-width-lg);
-    margin: 0 auto;
+    margin: 0 0 0 16rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-headers);
-    letter-spacing: -2px;    
+    letter-spacing: -2px;
     line-height: 1;
 }
 
@@ -84,22 +88,27 @@ h1 {
     font-size: 4rem;
     font-weight: 700;
 }
+
 h2 {
     font-size: 3.5rem;
     font-weight: 700;
 }
+
 h3 {
     font-size: 3rem;
     font-weight: 600;
 }
+
 h4 {
     font-size: 2.5rem;
     font-weight: 600;
 }
+
 h5 {
     font-size: 2rem;
     font-weight: 500;
 }
+
 h6 {
     font-size: 1.5rem;
     font-weight: 500;
@@ -107,6 +116,12 @@ h6 {
 
 .text-light {
     font-weight: 200;
+}
+
+.right-align {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
 }
 
 a {
@@ -121,20 +136,20 @@ a:hover {
 .btn {
     width: max-content;
     display: flex;
-    color: var(--color-white);
+    color: var(--color-primary);
     gap: 0.3rem;
     align-items: center;
-    padding: 0.75rem 1.2rem;
-    border-radius: 0.6rem;
+    padding: 0rem 0.1rem;
+    border-radius: 0;
     cursor: pointer;
-    border: 2px solid var(--color-secondary-variant);
     transition: var(--transition);
-    /* background: var(--color-secondary); */
+    border-bottom: 1px solid var(--color-primary);
 }
 
 .btn:hover {
-    background: var(--color-secondary-variant);
-    border-color: transparent;
+    color: var(--color-primary-variant);
+    border-bottom: 1px solid var(--color-primary-variant);
+
 }
 
 .btn-secondary {
