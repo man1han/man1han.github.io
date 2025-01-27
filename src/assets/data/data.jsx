@@ -200,13 +200,7 @@ export const projectCards = [
 ]
 
 
-
-
-
-
-
-
-const techStack = [
+export const languages = [
     {
         id: 1,
         icon: <SiPython />,
@@ -247,53 +241,59 @@ const techStack = [
         icon: <SiJavascript />,
         name: 'Javascript',
     },
+    
     {
         id: 9,
+        icon: <GrMysql />,
+        name: 'MySQL',
+    },
+    
+]
+
+
+export const technologies = [
+    {
+        id: 1,
         icon: <SiReact />,
         name: 'React',
     },
     {
-        id: 10,
+        id: 2,
         icon: <FaAngular />,
         name: 'Angular',
     },
     {
-        id: 11,
-        icon: <GrMysql />,
-        name: 'MySQL',
-    },
-    {
-        id: 12,
+        id: 3,
         icon: <SiFlutter />,
         name: 'Flutter',
     },
     {
-        id: 13,
+        id: 4,
         icon: <FaAws />,
         name: 'Amazon Web Services',
     },
     {
-        id: 14,
+        id: 5,
         icon: <SiGooglecloud />,
         name: 'Google Cloud Platform',
     },
     {
-        id: 15,
+        id: 6,
         icon: <SiUnity />,
         name: 'Unity',
     },
     {
-        id: 16,
+        id: 7,
         icon: <SiUnrealengine />,
         name: 'Unreal Engine',
     },
     {
-        id: 17,
+        id: 8,
         icon: <SiBlender />,
         name: 'Blender',
     },
     {
-        id: 18,
+        id: 9,
         icon: <SiAdobephotoshop />,
         name: 'Photoshop',
     },
