@@ -1,35 +1,34 @@
 import React from 'react'
 import './navbar.css'
 import { NavLink } from "react-router-dom";
+import CTA from '../CTA';
+import Resume from '../../assets/Resume-Manthan.pdf'
 
 import Socials from '../Socials';
 
 const Navbar = () => {
   return (
     <nav>
-
-      <h3>Manthan<br/> Bhatt</h3>
-      <p>Software Developer</p>
+      <h1 className='logo'>MB</h1>
+      <div class="logo-line"></div>
       <div className='navlinks'>
         <NavLink to="/" className='navlink'>
-          <h5>home</h5>
+          <p>Home</p>
         </NavLink>
         <NavLink to="/about" className='navlink'>
-          <h5>about</h5>
+          <p>About</p>
         </NavLink>
         <NavLink to="/projects" className='navlink'>
-          <h5>projects</h5>
+          <p>Projects</p>
         </NavLink>
         <NavLink to="/artworks" className='navlink'>
-          <h5>artwork</h5>
+          <p>Artwork</p>
         </NavLink>
-        <NavLink to="/writings" className='navlink'>
-          <h5>blog</h5>
+        <NavLink to="/blog" className='navlink'>
+          <p>Blog</p>
         </NavLink>
       </div>
-      <Socials />
     </nav >
-
   )
 }
 

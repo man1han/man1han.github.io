@@ -1,10 +1,7 @@
-/* Header Font */
-@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* Body Font */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-
+/* Setting defaults */
 * {
     margin: 0;
     padding: 0;
@@ -15,41 +12,40 @@
     text-decoration: none;
 }
 
+/* Creating variables */
 :root {
-    --color-black: #00171F;
-    --color-white: #DFE7ED;
 
-    --color-primary: #29738e;
-    --color-primary-variant: #5f96aa;
+    --color-black: #1e1e1e;
+    --color-white: #e1e1e1;
 
-    --color-secondary: #f1e5d7;
-    --color-secondary-variant: #7f6f62;
+    --color-primary: #c8b398;
+
+    --color-dark: #4c4c4c;
+    --color-light: #c4c4c4;
 
     /* RGB value strings for alpha value manipulation */
-    --rgb-black: 0, 23, 31;
-    --rgb-white: 223, 231, 237;
+    --rgb-black: 30, 30, 30;
+    --rgb-white: 225, 225, 225;
 
-    --rgb-primary: 41, 115, 142;
-    --rgb-primary-variant: 95, 150, 170;
+    --rgb-primary: 200, 179, 152;
+    --rgb-dark: 76, 76, 76;
+    --rgb-light: 196, 196, 196;
 
-    --rgb-secondary: 241, 229, 215;
-    --rgb-secondary-variant: 127, 111, 98;
-
-
+    /* transition variable */
     --transition: all 400ms ease;
 
     --container-width-lg: 85%;
     --container-width-md: 88%;
     --container-width-sm: 90%;
 
-    --font-headers: "Libre Bodoni", serif;
-    --font-body: "Montserrat", sans-serif;
+    /* --font-headers: "Libre Bodoni", serif; */
+    --font: "Poppins", serif;
 }
 
 html {
     scroll-behavior: smooth;
-    font-size: 16px;
-    background: var(--color-black);
+    font-size: 10px;
+    background: #111;
 }
 
 ::-webkit-scrollbar {
@@ -57,11 +53,14 @@ html {
 }
 
 body {
-    font-family: var(--font-body);
+    height: 100%;
+    font-family: var(--font);
     font-weight: 400;
-    color: var(--color-secondary);
-    line-height: 1.5;
-    background: linear-gradient(to right, var(--color-black), #000000);
+    color: var(--color-light);
+    line-height: 1;
+    /* background: var(--color-black); */
+    background: #111;
+    /* background: linear-gradient(to right, var(--color-black) 70%, #000000); */
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -70,7 +69,7 @@ body {
 
 .container {
     width: var(--container-width-lg);
-    margin: 0 0 0 16rem;
+    margin: auto;
 }
 
 h1,
@@ -79,67 +78,81 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--font-headers);
-    letter-spacing: -2px;
+    font-family: var(--font);
+    letter-spacing: 0px;
     line-height: 1;
 }
 
 h1 {
-    font-size: 4rem;
-    font-weight: 700;
+    font-size: 4.8rem;
 }
 
 h2 {
-    font-size: 3.5rem;
-    font-weight: 700;
+    font-size: 4.2rem;
 }
 
 h3 {
-    font-size: 3rem;
-    font-weight: 600;
+    font-size: 3.6rem;
 }
 
 h4 {
-    font-size: 2.5rem;
-    font-weight: 600;
+    font-size: 3.0rem;
 }
 
 h5 {
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: 2.4rem;
 }
 
 h6 {
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 2.4rem;
 }
 
-.text-light {
+p {
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.subtext {
+    font-size: 1.4rem;
     font-weight: 200;
 }
 
-.right-align {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
+.light{
+    font-weight: 300;
+}
+
+.semi-bold {
+    font-weight: 600;
+}
+
+.bold{
+    font-weight: 700;
+}
+
+.extra-bold {
+    font-weight: 800;
+}
+
+.super-bold {
+    font-weight: 900;
 }
 
 a {
-    color: var(--color-primary-variant);
+    color: var(--color-light);
     transition: var(--transition);
 }
 
 a:hover {
-    color: var(--color-white);
+    color: var(--color-primary);
 }
 
 .btn {
     width: max-content;
     display: flex;
     color: var(--color-primary);
-    gap: 0.3rem;
+    gap: 0.5rem;
     align-items: center;
-    padding: 0rem 0.1rem;
+    padding: 0.25rem 0.1rem;
     border-radius: 0;
     cursor: pointer;
     transition: var(--transition);
@@ -147,13 +160,15 @@ a:hover {
 }
 
 .btn:hover {
-    color: var(--color-primary-variant);
-    border-bottom: 1px solid var(--color-primary-variant);
+    color: var(--color-light);
+    border-bottom: 1px solid var(--color-light);
 
 }
 
-.btn-secondary {
-    background: var(--color-secondary);
+.right-align {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
 }
 
 img {

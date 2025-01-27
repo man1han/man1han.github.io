@@ -5,7 +5,11 @@ import { FaAws, FaAngular } from "react-icons/fa";
 import moodVault from '../projectImages/moodVault.png';
 import oneApp from '../projectImages/OneApp.png';
 import donut from '../artworkImages/donut.png';
-import inpainting from '../blogImages/inpainting.png'
+import inpainting from '../blogImages/inpainting.png';
+import kuroo from '../artworkImages/kuroo.png';
+import legacy from '../artworkImages/legacy.png';
+import me_outline from '../artworkImages/me_outline.png';
+import snor from '../artworkImages/snor.jpg';
 
 
 export const featuredProjects = [
@@ -22,6 +26,13 @@ export const featuredProjects = [
         description: 'The official app used at HackRU for check-in and other day-of needs',
         image: oneApp,
         link: 'https://example.com/project-one'
+    },
+    {
+        id: 3,
+        title: 'OneApp',
+        description: 'The official app used at HackRU for check-in and other day-of needs',
+        image: oneApp,
+        link: 'https://example.com/project-one'
     }]
 export const featuredArtwork = [
     {
@@ -33,7 +44,14 @@ export const featuredArtwork = [
     }]
 export const featuredBlog = [
     {
-        id: 4,
+        id: 1,
+        title: 'In-painting using Machine Learning',
+        description: 'Filling the pot holes in images using the artificially intelligent cement.',
+        image: inpainting,
+        link: 'https://example.com/project-three'
+    },
+    {
+        id: 2,
         title: 'In-painting using Machine Learning',
         description: 'Filling the pot holes in images using the artificially intelligent cement.',
         image: inpainting,
@@ -42,6 +60,144 @@ export const featuredBlog = [
 ]
 
 
+
+/// PROJECT DATA
+
+export const projectCards = [
+    {
+        id: 1,
+        title: 'Cup Mix Up',
+        image: oneApp,
+        description: " A digital take of the classic cup shuffle game",
+        stack: [<SiUnity />, <SiCsharp />],
+        tags: ['Web', 'Mobile'],
+        ongoing: true,
+        github: 'https://man1han.github.io/cmu',
+        demo: 'https://example.com/project-three',
+    },
+    {
+        id: 2,
+        title: 'OneApp',
+        image: oneApp,
+        description: 'Mobile App used in Rutgers\' hackathon: HackRU',
+        stack: [<SiFlutter />],
+        tags: ['Android', 'iOS', 'Web'],
+        ongoing: false,
+        github: 'https://github.com/HackRU/OneAppFlutter',
+        demo: 'https://example.com/project-three',
+    },
+    {
+        id: 3,
+        title: 'Webfolio',
+        image: oneApp,
+        description: 'This webpage developed using React.',
+        stack: [<SiReact />, <SiCss3 />],
+        tags: ['Web', 'UI'],
+        ongoing: false,
+        github: 'https://github.com/man1han/man1han.github.io',
+        demo: 'https://example.com/project-three',
+    },
+    {
+        id: 4,
+        title: 'Mood Vault',
+        image: moodVault,
+        description: 'Mood Vault is a powerful Google Chrome extension that provides an intuitive and seamless way for creative minds to create and manage mood boards effortlessly',
+        stack: [<SiJavascript />, <SiCss3 />, <SiHtml5 />],
+        tags: ['Web'],
+        ongoing: false,
+        github: 'https://chrome.google.com/webstore/detail/mood-vault/fdnlmnoceadijklmomfedckgjdclacgo',
+        demo: 'https://example.com/project-three',
+    },
+    {
+        id: 4,
+        title: 'Mood Vault',
+        image: moodVault,
+        description: 'Mood Vault is a powerful Google Chrome extension that provides an intuitive and seamless way for creative minds to create and manage mood boards effortlessly',
+        stack: [<SiJavascript />, <SiCss3 />, <SiHtml5 />],
+        tags: ['Web'],
+        ongoing: false,
+        github: 'https://chrome.google.com/webstore/detail/mood-vault/fdnlmnoceadijklmomfedckgjdclacgo',
+        demo: 'https://example.com/project-three',
+    },
+    {
+        id: 4,
+        title: 'Mood Vault',
+        image: moodVault,
+        description: 'Mood Vault is a powerful Google Chrome extension that provides an intuitive and seamless way for creative minds to create and manage mood boards effortlessly',
+        stack: [<SiJavascript />, <SiCss3 />, <SiHtml5 />],
+        tags: ['Web'],
+        ongoing: false,
+        github: 'https://chrome.google.com/webstore/detail/mood-vault/fdnlmnoceadijklmomfedckgjdclacgo',
+        demo: 'https://example.com/project-three',
+    },
+    {
+        id: 4,
+        title: 'Mood Vault',
+        image: moodVault,
+        description: 'Mood Vault is a powerful Google Chrome extension that provides an intuitive and seamless way for creative minds to create and manage mood boards effortlessly',
+        stack: [<SiJavascript />, <SiCss3 />, <SiHtml5 />],
+        tags: ['Web'],
+        ongoing: false,
+        github: 'https://chrome.google.com/webstore/detail/mood-vault/fdnlmnoceadijklmomfedckgjdclacgo',
+        demo: 'https://example.com/project-three',
+    },
+    {
+        id: 4,
+        title: 'Mood Vault',
+        image: moodVault,
+        description: 'Mood Vault is a powerful Google Chrome extension that provides an intuitive and seamless way for creative minds to create and manage mood boards effortlessly',
+        stack: [<SiJavascript />, <SiCss3 />, <SiHtml5 />],
+        tags: ['Web'],
+        ongoing: false,
+        github: 'https://chrome.google.com/webstore/detail/mood-vault/fdnlmnoceadijklmomfedckgjdclacgo',
+        demo: 'https://example.com/project-three',
+    },
+    {
+        id: 4,
+        title: 'Mood Vault',
+        image: moodVault,
+        description: 'Mood Vault is a powerful Google Chrome extension that provides an intuitive and seamless way for creative minds to create and manage mood boards effortlessly',
+        stack: [<SiJavascript />, <SiCss3 />, <SiHtml5 />],
+        tags: ['Web'],
+        ongoing: false,
+        github: 'https://chrome.google.com/webstore/detail/mood-vault/fdnlmnoceadijklmomfedckgjdclacgo',
+        demo: 'https://example.com/project-three',
+    },
+    {
+        id: 4,
+        title: 'Mood Vault',
+        image: moodVault,
+        description: 'Mood Vault is a powerful Google Chrome extension that provides an intuitive and seamless way for creative minds to create and manage mood boards effortlessly',
+        stack: [<SiJavascript />, <SiCss3 />, <SiHtml5 />],
+        tags: ['Web'],
+        ongoing: false,
+        github: 'https://chrome.google.com/webstore/detail/mood-vault/fdnlmnoceadijklmomfedckgjdclacgo',
+        demo: 'https://example.com/project-three',
+    },
+    {
+        id: 4,
+        title: 'Mood Vault',
+        image: moodVault,
+        description: 'Mood Vault is a powerful Google Chrome extension that provides an intuitive and seamless way for creative minds to create and manage mood boards effortlessly',
+        stack: [<SiJavascript />, <SiCss3 />, <SiHtml5 />],
+        tags: ['Web'],
+        ongoing: false,
+        github: 'https://chrome.google.com/webstore/detail/mood-vault/fdnlmnoceadijklmomfedckgjdclacgo',
+        demo: 'https://example.com/project-three',
+    },
+    {
+        id: 4,
+        title: 'Mood Vault',
+        image: moodVault,
+        description: 'Mood Vault is a powerful Google Chrome extension that provides an intuitive and seamless way for creative minds to create and manage mood boards effortlessly',
+        stack: [<SiJavascript />, <SiCss3 />, <SiHtml5 />],
+        tags: ['Web'],
+        ongoing: false,
+        github: 'https://chrome.google.com/webstore/detail/mood-vault/fdnlmnoceadijklmomfedckgjdclacgo',
+        demo: 'https://example.com/project-three',
+    },
+    
+]
 
 
 
@@ -143,14 +299,15 @@ const techStack = [
     },
 ]
 
-const education = [
+export const education = [
     {
         id: 1,
         school: 'Rutgers University',
         location: 'New Brunswick, NJ',
         degree: 'Bachelor of Science - Computer Science',
         gpa: '3.6 / 4.0',
-        dates: 'Sep 2019 - May 2023'
+        start:'Sep 2019',
+        end:'May 2023',
     },
     {
         id: 2,
@@ -158,7 +315,8 @@ const education = [
         location: 'Mumbai, India',
         degree: 'High School - Physical Sciences',
         gpa: '',
-        dates: 'Jun 2016 - May 2018'
+        start:'Jun 2016',
+        end:'May 2018',
     },
     {
         id: 3,
@@ -166,22 +324,21 @@ const education = [
         location: 'Mumbai, India',
         degree: 'High School',
         gpa: '',
-        dates: 'Sep 2006 - May 2016'
+        start:'Sep 2006',
+        end:'May 2016',
     }
 ]
 
-const workExperience = [
+export const workExperience = [
     {
         id: 1,
         title: 'Senior Mobile App Developer',
         company: 'HackRU',
         location: 'New Brunswick, NJ',
-        dates: 'Aug 2021 - May 2023',
+        start: 'May 2023',
+        end:'Aug 2021',
         description: [
-            'Supervised a team of 2 developers using agile methodologies in improving a cross-platform flutter application used by 300+ participants, mentors, organizers, and sponsors during the Rutgers Hackathon for day-of activities.',
-            'Spearheaded the integration of a QR scanning feature, streamlining the check-in process time by 30%, resulting in faster and efficient event entry for participants.',
-            'Augmented application accessibility by incorporating web-browsing capabilities, generating a notable 20% surge in user engagement.',
-            'Enhanced app functionality with real-time features including slack announcements, event schedules, and maps, garnering a 90% positive feedback from users.'
+            'Supervised a team of 2 developers using agile methodologies in improving a cross-platform flutter application used by 300+ participants, mentors, organizers, and sponsors during the Rutgers Hackathon for day-of activities.'
         ]
     },
     {
@@ -189,11 +346,10 @@ const workExperience = [
         title: 'Help Desk Operator',
         company: 'Rutgers University',
         location: 'Piscatway, NJ',
-        dates: 'Oct 2019 - May 2023',
+        start: 'Oct 2019',
+        end:'May 2023',
         description: [
-            'Provide basic operational support for the departments of Computer Science, Mathematics and Statistics at Rutgers University through the ticketing system.',
-            'Administer 50+ Linux servers and computers for regularly monitoring basic operations and perform Tier 1 troubleshooting and maintenance if necessary.',
-            'Follow standard operation protocols for preserving day-to-day logs.'
+            'Provide basic operational support for the departments of Computer Science, Mathematics and Statistics at Rutgers University through the ticketing system and administer 50+ Linux servers and computers for regularly monitoring basic operations and perform Tier 1 troubleshooting and maintenance if necessary.'
         ]
     },
     {
@@ -201,16 +357,15 @@ const workExperience = [
         title: 'Research Assistant',
         company: 'PRACSYS Robotics Lab',
         location: 'New Brunswick, NJ',
-        dates: 'May 2022 - Dec 2022',
+        start: 'May 2022',
+        end:'Dec 2022',
         description: [
-            'Performed comprehensive benchmarking using the ML4KP library for kinodynamic planners, analyzing and comparing the performance of the DIRT algorithm against state-of-the-art alternatives.',
-            'Collaborated with a multidisciplinary team of 4 researchers to refine and optimize advanced algorithms, contributing to a 25% enhancement in algorithm performance.',
-            'Utilized version control systems like Git to manage and track over 100 changes in code, ensuring seamless collaboration and integration of new features.'
+            'Performed comprehensive benchmarking using the ML4KP library for kinodynamic planners, analyzing and comparing the performance of the DIRT algorithm against state-of-the-art alternatives.'
         ]
     }
 ]
 
-const certifications = [
+export const certifications = [
     {
         id: 1,
         title: 'AWS Cloud Practioner',
@@ -230,104 +385,99 @@ const certifications = [
         title: 'Software Engineering Virtual Experience',
         from: 'JPMorganChase',
         date: 'May 2020',
-        link: 'https://insidesherpa.s3.amazonaws.com/completion-certificates/JP%20Morgan/R5iK7HMxJGBgaSbvk_JPMorgan%20Chase_eeXkSJESRooQDpnQv_completion_certificate.pdf'
+        link: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/J.P.%20Morgan/R5iK7HMxJGBgaSbvk_J.P.%20Morgan_eeXkSJESRooQDpnQv_1728362015638_completion_certificate.pdf'
     },
 ]
 
 
 
-const projectCards = [
-    {
-        id: 1,
-        title: 'Cup Mix Up',
-        description: " A digital take of the classic cup shuffle game",
-        stack: [<SiUnity />, <SiCsharp />],
-        tags: ['Web', 'Mobile'],
-        ongoing: true,
-        github: 'https://man1han.github.io/cmu',
-        demo: 'https://example.com/project-three',
-    },
-    {
-        id: 2,
-        title: 'OneApp',
-        description: 'Mobile App used in Rutgers\' hackathon: HackRU',
-        stack: [<SiFlutter />],
-        tags: ['Android', 'iOS', 'Web'],
-        ongoing: false,
-        github: 'https://github.com/HackRU/OneAppFlutter',
-        demo: 'https://example.com/project-three',
-    },
-    {
-        id: 3,
-        title: 'Webfolio',
-        description: 'This webpage developed using React.',
-        stack: [<SiReact />, <SiCss3 />],
-        tags: ['Web', 'UI'],
-        ongoing: false,
-        github: 'https://github.com/man1han/man1han.github.io',
-        demo: 'https://example.com/project-three',
-    },
-    {
-        id: 4,
-        title: 'Mood Vault',
-        description: 'Mood Vault is a powerful Google Chrome extension that provides an intuitive and seamless way for creative minds to create and manage mood boards effortlessly',
-        stack: [<SiJavascript />, <SiCss3 />, <SiHtml5 />],
-        tags: ['Web'],
-        ongoing: false,
-        github: 'https://chrome.google.com/webstore/detail/mood-vault/fdnlmnoceadijklmomfedckgjdclacgo',
-        demo: 'https://example.com/project-three',
-    },
-]
 
-const artworkCards = [
+
+export const artworkCards = [
     {
         id: 1,
-        image: 'https://placehold.co/600x400/000000/FFF',
+        image: legacy,
         title: 'Artwork 1',
         description: 'Some description of this artwork limited to a line',
         medium: 'Digital',
     },
     {
         id: 2,
-        image: 'https://placehold.co/600x400/000000/FFF',
+        image: me_outline,
         title: 'Artwork 2',
         description: 'Some description of this artwork limited to a line',
         medium: 'Pencil on paper',
     },
     {
         id: 3,
-        image: 'https://placehold.co/600x400/000000/FFF',
+        image: snor,
         title: 'Artwork 3',
         description: 'Some description of this artwork limited to a line',
         medium: 'Watercolor on paper',
     },
     {
         id: 4,
-        image: 'https://placehold.co/600x400/000000/FFF',
+        image: kuroo,
         title: 'Artwork 4',
         description: 'Some description of this artwork limited to a line',
         medium: 'Digital',
     },
     {
         id: 5,
-        image: 'https://placehold.co/600x400/000000/FFF',
+        image: donut,
         title: 'Artwork 5',
         description: 'Some description of this artwork limited to a line',
         medium: 'Digital',
     },
     {
         id: 6,
-        image: 'https://placehold.co/600x400/000000/FFF',
+        image: legacy,
+        title: 'Artwork 6',
+        description: 'Some description of this artwork limited to a line',
+        medium: 'Acrylic on paper',
+    },
+    {
+        id: 1,
+        image: legacy,
+        title: 'Artwork 1',
+        description: 'Some description of this artwork limited to a line',
+        medium: 'Digital',
+    },
+    {
+        id: 3,
+        image: snor,
+        title: 'Artwork 3',
+        description: 'Some description of this artwork limited to a line',
+        medium: 'Watercolor on paper',
+    },
+    {
+        id: 4,
+        image: kuroo,
+        title: 'Artwork 4',
+        description: 'Some description of this artwork limited to a line',
+        medium: 'Digital',
+    },
+    {
+        id: 5,
+        image: donut,
+        title: 'Artwork 5',
+        description: 'Some description of this artwork limited to a line',
+        medium: 'Digital',
+    },
+    {
+        id: 6,
+        image: legacy,
         title: 'Artwork 6',
         description: 'Some description of this artwork limited to a line',
         medium: 'Acrylic on paper',
     },
 ]
 
-const writingsCards = [
+export const blogCards = [
     {
         id: 1,
         title: 'Story 1',
+        image: inpainting,
         description: 'Some description of this writing not limited to a line and it is actually pretty long since I need to fill the space taken from having to put an image here.',
         tags: ['Fiction'],
         time: '6 min',
@@ -336,14 +486,16 @@ const writingsCards = [
     {
         id: 2,
         title: 'Story 2',
+        image: inpainting,
         description: 'Some description of this writing not limited to a line and it is actually pretty long since I need to fill the space taken from having to put an image here.',
-        tags: ['Case Study'],
+        tags: ['Case Study', 'Non-Fiction'],
         time: '4 min',
         link: 'https://example.com/project-two',
     },
     {
         id: 3,
         title: 'Story 3',
+        image: inpainting,
         description: 'Some description of this writing not limited to a line and it is actually pretty long since I need to fill the space taken from having to put an image here.',
         tags: ['Non-Fiction'],
         time: '3 min',
@@ -352,6 +504,7 @@ const writingsCards = [
     {
         id: 4,
         title: 'Story 4',
+        image: inpainting,
         description: 'Some description of this writing not limited to a line and it is actually pretty long since I need to fill the space taken from having to put an image here.',
         tags: ['Review'],
         time: '11 min',
@@ -360,6 +513,52 @@ const writingsCards = [
     {
         id: 5,
         title: 'Story 5',
+        image: inpainting,
+        description: 'Some description of this writing not limited to a line and it is actually pretty long since I need to fill the space taken from having to put an image here.',
+        tags: ['Tutorial'],
+        time: '2 min',
+        link: 'https://example.com/project-two',
+    },
+    {
+        id: 1,
+        title: 'Story 1',
+        image: inpainting,
+        description: 'Some description of this writing not limited to a line and it is actually pretty long since I need to fill the space taken from having to put an image here.',
+        tags: ['Fiction'],
+        time: '6 min',
+        link: 'https://example.com/project-two',
+    },
+    {
+        id: 2,
+        title: 'Story 2',
+        image: inpainting,
+        description: 'Some description of this writing not limited to a line and it is actually pretty long since I need to fill the space taken from having to put an image here.',
+        tags: ['Case Study'],
+        time: '4 min',
+        link: 'https://example.com/project-two',
+    },
+    {
+        id: 3,
+        title: 'Story 3',
+        image: inpainting,
+        description: 'Some description of this writing not limited to a line and it is actually pretty long since I need to fill the space taken from having to put an image here.',
+        tags: ['Non-Fiction'],
+        time: '3 min',
+        link: 'https://example.com/project-two',
+    },
+    {
+        id: 4,
+        title: 'Story 4',
+        image: inpainting,
+        description: 'Some description of this writing not limited to a line and it is actually pretty long since I need to fill the space taken from having to put an image here.',
+        tags: ['Review'],
+        time: '11 min',
+        link: 'https://example.com/project-two',
+    },
+    {
+        id: 5,
+        title: 'Story 5',
+        image: inpainting,
         description: 'Some description of this writing not limited to a line and it is actually pretty long since I need to fill the space taken from having to put an image here.',
         tags: ['Tutorial'],
         time: '2 min',

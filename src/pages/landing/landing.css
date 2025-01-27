@@ -4,148 +4,75 @@
 }
 
 .landing__container {
-    /* position: relative; */
-    padding: 2rem 4rem 2rem 1rem; 
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    grid-auto-rows: 1fr;
-    grid-auto-flow: dense;
-    gap: 1rem;
+    margin-top: 5rem;
+    /* padding: 2rem 4rem;  */
+    height: 90%;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.bento-section {
-    height: 100%;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    /* overflow: hidden; */
-}
-
-.bento-section-projects {
-    grid-column: span 7;
-    grid-row: span 5;
-    background: linear-gradient(to bottom, rgba(var(--rgb-primary-variant),0.12),  transparent); 
-    
-}
-
-.bento-section-artwork {
-    grid-column: span 5;
-    grid-row: span 5;
-    background: linear-gradient(to left, rgba(var(--rgb-primary-variant),0.12),  transparent);
-}
-
-.bento-section-text {
-    position: relative;
-    grid-column: span 3;
-    grid-row: span 3;
-    /* background: rgba(var(--rgb-primary-variant),0.12); */
-}
-
-.bento-section-blog {
-    grid-column: span 9;
-    grid-row: span 3;
-    background: linear-gradient(to top, rgba(var(--rgb-primary-variant),0.12),  transparent);
-}
-
-
-.intro-container {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: flex-start;
-    text-align: justify;
-    flex-direction: column;
-    padding: 1.4rem 1rem;
-    height: 110%;
-    font-size: 1.4rem;
-    opacity: 1;
-    justify-content: space-between;
-    background: rgba(var(--rgb-primary-variant),0.12);
-    z-index: 4;
-}
-
-.cta {
-    display: flex;
-    font-size: 1rem;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
-    margin: 0.1rem 0;
-}
-
-.landing-featured-title {
-    display: inline-flex;
-    font-style: italic;
-    justify-content: space-between;
-    font-weight: 200;
-    width: 100%;
-    height: 2rem;
-    
-}
-
-.landing-featured-title>p {
-    text-wrap: nowrap;
-    padding: 0 0.5rem;
-}
-
-.landing-featured-title-line {
-    content: '';
-    width: 100%;
-    height: 1px;
-    margin: 0.8rem 0.1rem;
-    background-color: rgba(var(--rgb-secondary-variant));
-}
-
-.landing-featured-projects {
+.landing-center {
+    /* background-color: red; */
+    width: 50%;
+    height: 95%;
     display: grid;
-    height: 100%;
-    grid-template-columns: 1fr 1fr;
-    overflow: hidden;
-    padding: 0.5rem 0rem;
-    gap: 10px;
+    grid-template-rows: 4fr 2fr;
+    grid-template-columns: 1fr;
+    padding-bottom: 2rem;
+
 }
 
-
-
-/*  ================== CTA ================ */
-/* .cta {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
-    margin: 2rem 0;
-} */
-
-/* =================== FREATURED ================== */
-/* .featured__container {
-    background-color: rgba(var(--rgb-secondary), 0.2);
+.landing-top {
     height: 100%;
+}
+
+.landing-bottom {
+    display: grid;
+    height: fit-content;
+    grid-template-areas:
+        'm m'
+        'b t';
+    align-items: center;
+    grid-template-columns: 2fr 1.7fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 0 0rem;
+    transform: translateY(-3rem);
+}
+
+.me {
+    padding: 2rem;
+}
+
+.me img {
     width: 100%;
-    position: relative;
+    height: 50vh;
+    object-fit: scale-down;
+    opacity: 0.8;
+
 }
 
-.heading {
-    padding: 1rem 0;
-    font-size: 2.5rem;
-    text-align: center;
+.manthan {
+    grid-area: m;
+    font-size: 15rem;
+    font-weight: 100;
 }
 
-.featured_card{
-    background-color: black;
-    height: 80%;
-    width: 20rem;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    display: flex;
-    border-radius: 20px;
-    position: relative;
-} */
+.bhatt {
+    grid-area: b;
+    font-size: 15rem;
+    font-weight: 100;
+}
+
+.text {
+    grid-area: t;
+    font-size: 2.2rem;
+    font-weight: 100;
+    padding: 2rem 3rem 0 1rem;
+    line-height: 1.6;
+    color: var(--color-primary);
+}
+
 
 
 /* =================== LANDING SOCIALS ================== */

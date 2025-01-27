@@ -9,7 +9,8 @@ import Navbar from './components/navbar/Navbar'
 import About from './pages/about/About'
 import Projects from './pages/projects/Projects'
 import Artworks from './pages/artworks/Artworks'
-import Writings from './pages/writings/Writings'
+import Blog from './pages/blog/Blog'
+import Socials from './components/Socials';
 
 const App = () => {
     return (
@@ -20,8 +21,9 @@ const App = () => {
                 <Route path="/about" element={<About/>}/>
                 <Route path="/projects" element={<Projects/>}/>
                 <Route path="/artworks" element={<Artworks/>}/>
-                <Route path="/writings" element={<Writings/>}/>
+                <Route path="/blog" element={<Blog/>}/>
             </Routes>
+            <Socials/>
         </Router>
     )
 }

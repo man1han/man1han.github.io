@@ -11,7 +11,7 @@ const FeaturedCard = ({ image, title, description, text, link }) => {
         <div className="featured-card__overlay">
           <div className="featured-card__content">
             <h4 className="featured-card__title">{title}</h4>
-            <p className="featured-card__description text-light">{description}</p>
+            <p className="featured-card__description">{description}</p>
             {/* <CTA text={text} link={link} /> */}
           </div>
         </div>
