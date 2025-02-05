@@ -2,11 +2,28 @@ import React from "react"
 import './blog.css'
 import { blogCards } from "../../assets/data/data"
 import CTA from "../../components/CTA"
+import { Link } from 'react-router-dom';
+import { useRef, useEffect } from 'react';
 
 
 const Blog = () => {
+    const containerRef = useRef(null); // Ref for the scroll container
+
+    useEffect(() => {
+        // Restore scroll position if it exists
+        const savedPosition = sessionStorage.getItem('scrollPosition');
+        if (savedPosition && containerRef.current) {
+            containerRef.current.scrollTo(0, parseInt(savedPosition, 10));
+        }
+    }, []);
+
+    const handleProjectClick = () => {
+        if (containerRef.current) {
+            sessionStorage.setItem('scrollPosition', containerRef.current.scrollTop);
+        }
+    };
     return (
-        <div className='container' id='blog'>
+        <div className='container' id='blog' ref={containerRef}>
             <div className="blog__container">
                 <section className='blog__title'>
                     <h1>Blog</h1>
@@ -21,19 +38,22 @@ const Blog = () => {
                                 <div className="blog__time">{item.time} read</div>
                                 <h4>{item.title}</h4>
                                 <div className="topics">
-                                   {
-                                    item.tags.map((tags, index) => (
-                                    <div className="topic">{tags}</div>))
-                                   } 
+                                    {
+                                        item.tags.map((tags, index) => (
+                                            <div className="topic">{tags}</div>))
+                                    }
                                 </div>
                                 <div className='blog__desc'>{item.description}</div>
                                 <div className="right-align check">
-                                    <CTA  text={"Check this out"}></CTA>
+                                    <Link key={item.slug} to={`/blogs/${item.slug}`} className="projects__item-link" onClick={handleProjectClick}>
+                                        <CTA text={"Check this out"}></CTA>
+                                    </Link>
+
                                 </div>
-                                
+
                             </div>
 
-                                   
+
                         </article>
                     ))}
                 </div>
