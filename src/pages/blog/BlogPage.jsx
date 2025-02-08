@@ -1,5 +1,8 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { blogCards } from '../../assets/data/data'; // Import the same data
+import './blogPage.css'
+import './blog.css'
+import CaptionedImage from '../../components/CaptionedImage';
 
 function BlogPage() {
 
@@ -24,23 +27,33 @@ function BlogPage() {
     }
 
     return (
-        <div className="blog-page">
-            <img src={blog.image} alt={blog.title} className="blog__img" />
-            <div className="blog__text">
-
-                <div className="blog__time">{blog.time} read</div>
-                <h4>{blog.title}</h4>
-                <div className="topics">
+        <div className="blog-page container">
+            <div className="blog-title">
+                <button onClick={handleBackClick} className="back-button">← Back</button>
+                <h1>{blog.title}</h1>
+                <div className="blog-tags">
                     {
                         blog.tags.map((tags, index) => (
-                            <div className="topic">{tags}</div>))
+                            <p>{tags}</p>))
                     }
                 </div>
-                <div className='blog__desc'>{blog.description}</div>
+            </div>
+            <div className="blog-content">
+                {blog.content.map((block, index) => {
+                    if (block.type === "text") {
+                        return <p key={index}>{block.data}</p>;
+                    } else if (block.type === "image") {
+                        return <CaptionedImage key={index} text={block.alt} link={block.data} />;
+                    }
+                    else if (block.type === "heading") {
+                        return <h5 key={index}>{block.data}</h5>
+                    }
+                    return null;
+                })}
 
 
             </div>
-            <button onClick={handleBackClick} className="back-button">← Back</button>
+
         </div>
     );
 }

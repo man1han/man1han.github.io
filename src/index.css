@@ -171,6 +171,27 @@ a:hover {
     justify-content: flex-end;
 }
 
+.captionedImage {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.captionedImage>img{
+    width: 60vw;
+    height: 70vh;
+    object-fit: cover;
+}
+
+.captionedImage>p {
+    font-size: 1.5rem;
+    font-weight: 200;
+    font-style: italic;
+}
+
 img {
     display: block;
     width: 100%;

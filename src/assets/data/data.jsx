@@ -112,7 +112,7 @@ export const projectCards = [
         github: 'https://chrome.google.com/webstore/detail/mood-vault/fdnlmnoceadijklmomfedckgjdclacgo',
         demo: 'https://example.com/project-three',
     },
-    
+
 ]
 
 
@@ -157,13 +157,13 @@ export const languages = [
         icon: <SiJavascript />,
         name: 'Javascript',
     },
-    
+
     {
         id: 9,
         icon: <GrMysql />,
         name: 'MySQL',
     },
-    
+
 ]
 
 
@@ -222,8 +222,8 @@ export const education = [
         location: 'New Brunswick, NJ',
         degree: 'Bachelor of Science - Computer Science',
         gpa: '3.6 / 4.0',
-        start:'Sep 2019',
-        end:'May 2023',
+        start: 'Sep 2019',
+        end: 'May 2023',
     },
     {
         id: 2,
@@ -231,8 +231,8 @@ export const education = [
         location: 'Mumbai, India',
         degree: 'High School - Physical Sciences',
         gpa: '',
-        start:'Jun 2016',
-        end:'May 2018',
+        start: 'Jun 2016',
+        end: 'May 2018',
     },
     {
         id: 3,
@@ -240,8 +240,8 @@ export const education = [
         location: 'Mumbai, India',
         degree: 'High School',
         gpa: '',
-        start:'Sep 2006',
-        end:'May 2016',
+        start: 'Sep 2006',
+        end: 'May 2016',
     }
 ]
 
@@ -252,7 +252,7 @@ export const workExperience = [
         company: 'HackRU',
         location: 'New Brunswick, NJ',
         start: 'May 2023',
-        end:'Aug 2021',
+        end: 'Aug 2021',
         description: [
             'Supervised a team of 2 developers using agile methodologies in improving a cross-platform flutter application used by 300+ participants, mentors, organizers, and sponsors during the Rutgers Hackathon for day-of activities.'
         ]
@@ -263,7 +263,7 @@ export const workExperience = [
         company: 'Rutgers University',
         location: 'Piscatway, NJ',
         start: 'Oct 2019',
-        end:'May 2023',
+        end: 'May 2023',
         description: [
             'Provide basic operational support for the departments of Computer Science, Mathematics and Statistics at Rutgers University through the ticketing system and administer 50+ Linux servers and computers for regularly monitoring basic operations and perform Tier 1 troubleshooting and maintenance if necessary.'
         ]
@@ -274,7 +274,7 @@ export const workExperience = [
         company: 'PRACSYS Robotics Lab',
         location: 'New Brunswick, NJ',
         start: 'May 2022',
-        end:'Dec 2022',
+        end: 'Dec 2022',
         description: [
             'Performed comprehensive benchmarking using the ML4KP library for kinodynamic planners, analyzing and comparing the performance of the DIRT algorithm against state-of-the-art alternatives.'
         ]
@@ -399,6 +399,14 @@ export const blogCards = [
         tags: ['Fiction'],
         time: '6 min',
         link: 'https://example.com/project-two',
+        content: [
+            { "type": "text", "data": "Welcome to my first blog post! Here, I will share my thoughts on React and dynamic content rendering. Typing more shit so that i can check if longer paragraphs work in this blog page. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." },
+            { "type": "image", "data": inpainting, "alt": "React Logo" },
+            {"type": "heading", "data": "Chapter two"},
+            { "type": "text", "data": "React makes it super easy to work with dynamic data. Using JSON, we can store blog content flexibly.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." },
+            { "type": "image", "data": snor, "alt": "A code snippet" },
+            { "type": "text", "data": "Stay tuned for more insights!" }
+        ]
     },
     {
         id: 2,
