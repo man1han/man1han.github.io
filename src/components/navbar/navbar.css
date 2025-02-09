@@ -185,4 +185,11 @@ nav {
     .socials_section {
         display: none;
     }
+
+    .logo {
+        display: none;
+    }
+    .logo-line {
+        display: none;
+    }
 }

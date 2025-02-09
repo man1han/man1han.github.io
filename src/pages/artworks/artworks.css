@@ -97,3 +97,9 @@
     background: rgba(var(--rgb-black), 0.8);
     opacity: 1;
 }
+
+@media screen and (max-width: 1024px) {
+    .artworks__container {
+        padding: 2rem 1rem 16rem 1rem;
+    }
+}
