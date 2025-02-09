@@ -1,18 +1,43 @@
 {
   "files": {
-    "main.css": "/static/css/main.a122ee47.css",
-    "main.js": "/static/js/main.93fd9ac1.js",
-    "static/media/Developer activity-pana.png": "/static/media/Developer activity-pana.0ba3745afb262312ec7e.png",
+    "main.css": "/static/css/main.62926155.css",
+    "main.js": "/static/js/main.411cf25e.js",
+    "static/media/eyes.png": "/static/media/eyes.16f2e2de9be8771c983f.png",
+    "static/media/ink2.png": "/static/media/ink2.ccf0cb447f2512022a74.png",
+    "static/media/melodyai.png": "/static/media/melodyai.53622e5cbce86ea918e7.png",
+    "static/media/donut.png": "/static/media/donut.28719e835c2f100094f8.png",
+    "static/media/ink24.jpg": "/static/media/ink24.012a1b225bc24b8ff559.jpg",
+    "static/media/inpainting.png": "/static/media/inpainting.ba15df3af4801817aea6.png",
+    "static/media/guitar.png": "/static/media/guitar.ad6a9ed989db872e04c3.png",
+    "static/media/ink20.png": "/static/media/ink20.8fcbc763802ff4860c75.png",
+    "static/media/diagonalley.png": "/static/media/diagonalley.3435418a72494bc8b045.png",
+    "static/media/lips.png": "/static/media/lips.f5ced1d528d1bf223bac.png",
+    "static/media/legacy.png": "/static/media/legacy.4cb7f4b5958175bd3c1d.png",
+    "static/media/ink31.png": "/static/media/ink31.81dba0c69ab98b453ca6.png",
+    "static/media/mountainscape.png": "/static/media/mountainscape.124ad71557ecd33370e5.png",
+    "static/media/ink16.png": "/static/media/ink16.a5bc3c374f8c6a5596e8.png",
+    "static/media/ink21.png": "/static/media/ink21.16fa0fa6149159e7639d.png",
+    "static/media/hall.png": "/static/media/hall.67300ae9e87a53f101cf.png",
+    "static/media/oneWeOne.png": "/static/media/oneWeOne.af85a43a0938cb9f9a7b.png",
+    "static/media/sound5.png": "/static/media/sound5.aa892456d17e51b54be2.png",
+    "static/media/ross.png": "/static/media/ross.fc7b6650bec7793cf1d0.png",
+    "static/media/cupmixup.png": "/static/media/cupmixup.59eca10c151dc9385984.png",
+    "static/media/uply.png": "/static/media/uply.3f61b9428e6f88462f24.png",
+    "static/media/hackru.png": "/static/media/hackru.4570fd6c1c805fb4b64e.png",
+    "static/media/webfolio.png": "/static/media/webfolio.66eca47b3c0dfd90fa3b.png",
+    "static/media/me.png": "/static/media/me.ae6fd439193997017a0d.png",
+    "static/media/selena.png": "/static/media/selena.329ff6ed8117a93007fc.png",
+    "static/media/me_outline.png": "/static/media/me_outline.adce63c8b74e9f26c6dc.png",
+    "static/media/shortestpath.png": "/static/media/shortestpath.e901560cb4b3c8f85a9e.png",
+    "static/media/moodVault.png": "/static/media/moodVault.dccb8944ba3fe6a834e5.png",
     "static/media/Resume-Manthan.pdf": "/static/media/Resume-Manthan.109d53489a92a4d7113e.pdf",
-    "static/media/LogoMBWhite.png": "/static/media/LogoMBWhite.afa49bf4efab039747ea.png",
-    "static/media/video-console.png": "/static/media/video-console.aae6f7f16c7bfd7a2187.png",
-    "static/media/website.png": "/static/media/website.b22da589ea18b129e146.png",
+    "static/media/stateestimation.png": "/static/media/stateestimation.d6d4e171b659b727460c.png",
     "index.html": "/index.html",
-    "main.a122ee47.css.map": "/static/css/main.a122ee47.css.map",
-    "main.93fd9ac1.js.map": "/static/js/main.93fd9ac1.js.map"
+    "main.62926155.css.map": "/static/css/main.62926155.css.map",
+    "main.411cf25e.js.map": "/static/js/main.411cf25e.js.map"
   },
   "entrypoints": [
-    "static/css/main.a122ee47.css",
-    "static/js/main.93fd9ac1.js"
+    "static/css/main.62926155.css",
+    "static/js/main.411cf25e.js"
   ]
 }
