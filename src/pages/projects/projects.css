@@ -1,0 +1,212 @@
+#projects {
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.projects__container {
+    padding: 8rem 2rem 2rem 2rem;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-auto-flow: dense;
+    gap: 1rem;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.projects__title {
+    display: flex;
+    /* justify-content: space-between; */
+    vertical-align: middle;
+    flex-direction: column;
+    gap: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.projects__title>h1 {
+    font-size: 7.2rem;
+    font-weight: 300;
+    
+}
+
+.projects__title>p {
+    font-size: 2.8rem;
+    font-weight: 100;
+    color: var(--color-primary);
+}
+
+.projects__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 25vw);
+    grid-template-rows: 25vw;
+    width: 100%;
+    height: 100%;
+    gap: 3.6rem;
+    margin-top: 2rem;
+    padding: 0rem 0rem;
+}
+
+.projects__item {
+    position: relative;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    background: var(--color-black);
+    transition: var(--transition);
+    max-height: 60vh;
+    width: 55vh;
+}
+.projects__image-container{
+    position: relative;
+    width: 100%;
+    height: 65%;
+    overflow: hidden;
+}
+
+.projects__item-image {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    object-fit: cover;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(var(--rgb-black),1) 5%,  rgba(var(--rgb-black),0.2));
+}
+
+.hover-effect {
+    position: absolute;
+    display: flex;
+    font-size: large;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+    opacity: 0;
+    background: rgba(var(--rgb-black),0.8);
+    transition: var(--transition);
+}
+
+.projects__item:hover .hover-effect {
+    display: flex;
+    background: rgba(var(--rgb-black),0.8);
+    opacity: 1;
+}
+
+.project__info {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.projects__item-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+.desc {
+    /* height: 2.3rem; */
+    /* max-width: 300px; */
+    line-height: 1;
+    font-size: 1.4rem;
+    /* letter-spacing: 1px; */
+    /* overflow: hidden; */
+    /* margin: 0 0.5rem; */
+    font-weight: 200;
+
+    color: var(--color-primary);
+}
+
+.projects__stack-icons{
+    display: flex;
+    gap: 1rem;
+}
+.projects__item-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    /* margin-bottom: 1rem; */
+    margin: 0.7rem 0.5rem;
+}
+
+.project__tag {
+    position: absolute;
+    color: var(--color-primary);
+    font-weight: 500;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1.5rem;
+    background: var(--color-dark);
+    border: 1px solid var(--color-light);
+    border-radius: 2rem;
+}
+
+.projects__item-stack {
+    height: 100%;
+    align-items: center;
+    display: inline-flex;
+    gap: 0.5rem;
+    font-size: 3rem;
+    border-radius: 2rem;
+    color: var(--color-primary);
+}
+
+.projects__item-cta a {
+    display: inline-flex;
+}
+
+.toProjPage {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* =============== MEDIA QUERIES (MEDIUM DEVICES) ============ */
+
+@media screen and (max-width: 1024px) {
+    .projects__container {
+        padding: 12rem 1rem 16rem 1rem;
+    }
+    .projects__cards {
+        grid-template-columns: repeat(1, 70vw); /* 1 column */
+        gap: 1.5rem;
+        justify-content: center;
+        grid-template-rows: 100vw;
+    }
+    .projects__item {
+        width: unset;
+        height: 100vw;
+    }
+}
+
+/* =============== MEDIA QUERIES (SMALL DEVICES) ============ */
+
+@media screen and (max-width: 600px) {
+    .projects__cards {
+        grid-template-columns: repeat(1, 80vw); /* 1 column */
+        gap: 1.5rem;
+        justify-content: center;
+        grid-template-rows: 100vw;
+    }
+    .projects__item {
+        width: unset;
+        height: 100vw;
+    }
+}
