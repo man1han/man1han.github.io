@@ -107,7 +107,7 @@
 
 @media screen and (max-width: 1024px) {
     .landing__container {
-        justify-content: unset;
+        width: 100%;
     }
     .me img {
         width: 80vw;
@@ -116,7 +116,7 @@
 
     .landing-center {
         width: 90%;
-
+        height: 80%;
         grid-template-rows: 1fr 1fr;
     }
 

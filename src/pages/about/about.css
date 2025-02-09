@@ -278,7 +278,7 @@
     .about__container {
         display: flex;
         flex-direction: column;
-        padding: 2rem 1rem 16rem 1rem;
+        padding: 12rem 1rem 16rem 1rem;
         width: 90vw;
     }
 

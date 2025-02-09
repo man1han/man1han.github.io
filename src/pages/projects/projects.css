@@ -182,7 +182,7 @@
 
 @media screen and (max-width: 1024px) {
     .projects__container {
-        padding: 2rem 1rem 16rem 1rem;
+        padding: 12rem 1rem 16rem 1rem;
     }
     .projects__cards {
         grid-template-columns: repeat(1, 70vw); /* 1 column */
@@ -200,7 +200,7 @@
 
 @media screen and (max-width: 600px) {
     .projects__cards {
-        grid-template-columns: repeat(1, 70vw); /* 1 column */
+        grid-template-columns: repeat(1, 80vw); /* 1 column */
         gap: 1.5rem;
         justify-content: center;
         grid-template-rows: 100vw;
