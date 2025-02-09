@@ -137,6 +137,7 @@ const About = () => {
                       </h6>
                       <div className="exp__location">
                         <p>{item.degree}</p>
+                        <p> | </p>
                         <p>{item.location}</p>
                       </div>
                     </div>

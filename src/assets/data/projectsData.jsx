@@ -5,10 +5,8 @@ import moodVault from '../projectImages/moodVault.png';
 import oneApp from '../projectImages/OneApp.png';
 import donut from '../artworkImages/donut.png';
 import inpainting from '../blogImages/inpainting.png';
-import kuroo from '../artworkImages/kuroo.png';
 import legacy from '../artworkImages/legacy.png';
 import me_outline from '../artworkImages/me_outline.png';
-import snor from '../artworkImages/snor.jpg';
 
 export const projectDetails = [
     {

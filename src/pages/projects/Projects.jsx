@@ -46,7 +46,7 @@ const Projects = () => {
                 <img src={item.image} alt={item.title} className='projects__item-image' />
 
                 <div className="overlay"></div>
-                <div className="project__tag">Mobile App</div>
+                <div className="project__tag">{item.tag}</div>
               </div>
               <div className="project__info">
                 <div className="projects__stack-icons">

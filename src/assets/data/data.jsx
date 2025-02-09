@@ -1,119 +1,31 @@
 import React from "react";
-import { SiPython, SiCsharp, SiC, SiCplusplus, SiJavascript, SiFlutter, SiUnity, SiBlender, SiUnrealengine, SiGooglecloud, SiCss3, SiJava, SiReact, SiHtml5, SiAdobephotoshop } from 'react-icons/si'
+import { SiPython, SiCsharp, SiC, SiCplusplus, SiJavascript, SiFlutter, SiUnity, SiBlender, SiUnrealengine, SiGooglecloud, SiCss3, SiJava, SiReact, SiHtml5, SiAdobephotoshop, SiAndroid, SiIos, SiGooglechrome, SiTensorflow, SiMidi, SiAudacity, SiNumpy, SiPandas, SiFlask, SiKeras, SiGit, SiOpencv } from 'react-icons/si'
 import { GrMysql } from 'react-icons/gr'
 import { FaAws, FaAngular } from "react-icons/fa";
+
+import legacy from '../artworkImages/legacy.png';
+import lips from '../artworkImages/lips.png';
+import diagonalley from '../artworkImages/diagonalley.png';
+import ross from '../artworkImages/ross.png';
+import selena from '../artworkImages/selena.png';
+import ink2 from '../artworkImages/ink2.png';
+import ink16 from '../artworkImages/ink16.png';
+import ink20 from '../artworkImages/ink20.png';
+import me_outline from '../artworkImages/me_outline.png';
+import ink21 from '../artworkImages/ink21.png';
+import ink24 from '../artworkImages/ink24.jpg';
+import ink31 from '../artworkImages/ink31.png';
+import donut from '../artworkImages/donut.png';
+import mountainscape from '../artworkImages/mountainscape.png'
+import sound5 from '../artworkImages/sound5.png';
+import hall from '../artworkImages/hall.png';
+import guitar from '../artworkImages/guitar.png';
+import eyes from '../artworkImages/eyes.png';
+
 import moodVault from '../projectImages/moodVault.png';
 import oneApp from '../projectImages/OneApp.png';
-import donut from '../artworkImages/donut.png';
 import inpainting from '../blogImages/inpainting.png';
-import kuroo from '../artworkImages/kuroo.png';
-import legacy from '../artworkImages/legacy.png';
-import me_outline from '../artworkImages/me_outline.png';
-import snor from '../artworkImages/snor.jpg';
 
-
-export const featuredProjects = [
-    {
-        id: 1,
-        title: 'Mood Vault',
-        description: 'A google chrome extension to save mood boards for all your creative needs.',
-        image: moodVault,
-        link: 'https://example.com/project-one'
-    },
-    {
-        id: 2,
-        title: 'OneApp',
-        description: 'The official app used at HackRU for check-in and other day-of needs',
-        image: oneApp,
-        link: 'https://example.com/project-one'
-    },
-    {
-        id: 3,
-        title: 'OneApp',
-        description: 'The official app used at HackRU for check-in and other day-of needs',
-        image: oneApp,
-        link: 'https://example.com/project-one'
-    }]
-export const featuredArtwork = [
-    {
-        id: 1,
-        title: 'Donut try this at home',
-        description: 'The “hello world” of 3D modeling in Blender.',
-        image: donut,
-        link: 'https://example.com/project-two'
-    }]
-export const featuredBlog = [
-    {
-        id: 1,
-        title: 'In-painting using Machine Learning',
-        description: 'Filling the pot holes in images using the artificially intelligent cement.',
-        image: inpainting,
-        link: 'https://example.com/project-three'
-    },
-    {
-        id: 2,
-        title: 'In-painting using Machine Learning',
-        description: 'Filling the pot holes in images using the artificially intelligent cement.',
-        image: inpainting,
-        link: 'https://example.com/project-three'
-    },
-]
-
-
-
-/// PROJECT DATA
-
-export const projectCards = [
-    {
-        id: 1,
-        slug: 'cup-mix-up',
-        title: 'Cup Mix Up',
-        image: oneApp,
-        description: " A digital take of the classic cup shuffle game",
-        stack: [<SiUnity />, <SiCsharp />],
-        tags: ['Web', 'Mobile'],
-        ongoing: true,
-        github: 'https://man1han.github.io/cmu',
-        demo: 'https://example.com/project-three',
-    },
-    {
-        id: 2,
-        slug: 'one-app',
-        title: 'OneApp',
-        image: oneApp,
-        description: 'Mobile App used in Rutgers\' hackathon: HackRU',
-        stack: [<SiFlutter />],
-        tags: ['Android', 'iOS', 'Web'],
-        ongoing: false,
-        github: 'https://github.com/HackRU/OneAppFlutter',
-        demo: 'https://example.com/project-three',
-    },
-    {
-        id: 3,
-        slug: 'webfolio',
-        title: 'Webfolio',
-        image: oneApp,
-        description: 'This webpage developed using React.',
-        stack: [<SiReact />, <SiCss3 />],
-        tags: ['Web', 'UI'],
-        ongoing: false,
-        github: 'https://github.com/man1han/man1han.github.io',
-        demo: 'https://example.com/project-three',
-    },
-    {
-        id: 4,
-        slug: 'mood-vault',
-        title: 'Mood Vault',
-        image: moodVault,
-        description: 'Mood Vault is a powerful Google Chrome extension that provides an intuitive and seamless way for creative minds to create and manage mood boards effortlessly',
-        stack: [<SiJavascript />, <SiCss3 />, <SiHtml5 />],
-        tags: ['Web'],
-        ongoing: false,
-        github: 'https://chrome.google.com/webstore/detail/mood-vault/fdnlmnoceadijklmomfedckgjdclacgo',
-        demo: 'https://example.com/project-three',
-    },
-
-]
 
 
 export const languages = [
@@ -170,48 +82,79 @@ export const languages = [
 export const technologies = [
     {
         id: 1,
-        icon: <SiReact />,
-        name: 'React',
+        icon: <SiPandas />,
+        name: 'Pandas',
     },
     {
         id: 2,
-        icon: <FaAngular />,
-        name: 'Angular',
+        icon: <SiNumpy />,
+        name: 'Numpy',
     },
     {
         id: 3,
-        icon: <SiFlutter />,
-        name: 'Flutter',
+        icon: <SiTensorflow />,
+        name: 'TensorFlow',
     },
     {
         id: 4,
+        icon: <SiKeras />,
+        name: 'Keras',
+    },
+    {
+        id: 5,
         icon: <FaAws />,
         name: 'Amazon Web Services',
     },
     {
-        id: 5,
+        id: 6,
         icon: <SiGooglecloud />,
         name: 'Google Cloud Platform',
     },
     {
-        id: 6,
+        id: 7,
+        icon: <SiReact />,
+        name: 'React',
+    },
+    {
+        id: 8,
+        icon: <FaAngular />,
+        name: 'Angular',
+    },
+    {
+        id: 9,
+        icon: <SiFlutter />,
+        name: 'Flutter',
+    },
+
+    {
+        id: 10,
         icon: <SiUnity />,
         name: 'Unity',
     },
     {
-        id: 7,
+        id: 11,
         icon: <SiUnrealengine />,
         name: 'Unreal Engine',
     },
     {
-        id: 8,
+        id: 12,
         icon: <SiBlender />,
         name: 'Blender',
     },
     {
-        id: 9,
+        id: 13,
         icon: <SiAdobephotoshop />,
         name: 'Photoshop',
+    },
+    {
+        id: 14,
+        icon: <SiGit />,
+        name: 'Git',
+    },
+    {
+        id: 15,
+        icon: <SiOpencv />,
+        name: 'OpenCV',
     },
 ]
 
@@ -307,87 +250,232 @@ export const certifications = [
 
 
 
-
+/// PROJECT CARDS
+export const projectCards = [
+    {
+        id: 1,
+        slug: 'webfolio',
+        title: 'WebFolio',
+        image: oneApp,
+        description: 'This website-portfolio made for personal branding',
+        stack: [<SiReact />, <SiCss3 />, <SiHtml5 />, <SiJavascript />],
+        tag: 'Website',
+        ongoing: false,
+    },
+    {
+        id: 2,
+        slug: 'one-app',
+        title: 'OneApp',
+        image: oneApp,
+        description: 'A cross-platform mobile application for hackers, organizers, mentors, and sponsors at the HackRU.',
+        stack: [<SiFlutter />, <FaAws />, <SiAndroid />, <SiIos />],
+        tag: 'Mobile App',
+        ongoing: false,
+    },
+    {
+        id: 3,
+        slug: 'cup-mix-up',
+        title: 'Cup Mix Up',
+        image: oneApp,
+        description: 'A digital version of the classic cup shuffle game',
+        stack: [<SiUnity />, <SiCsharp />, <SiBlender />],
+        tag: 'Video Game',
+        ongoing: true,
+    },
+    {
+        id: 4,
+        slug: 'mood-vault',
+        title: 'Mood Vault',
+        image: moodVault,
+        description: 'Mood Vault is a powerful Google Chrome extension that provides an intuitive way to create and manage mood boards effortlessly',
+        stack: [<SiJavascript />, <SiCss3 />, <SiHtml5 />, <SiGooglechrome />],
+        tag: 'Chrome Extension',
+        ongoing: false
+    },
+    {
+        id: 5,
+        slug: 'melody-ai',
+        title: 'MelodyAI',
+        image: moodVault,
+        description: 'An LSTM-based neural network using Tensorflow for AI-driven music composition, capable of generating complex melodies with human-like structure',
+        stack: [<SiPython />, <SiTensorflow />, <SiMidi />, <SiAudacity />],
+        tag: 'Deep Learning',
+        ongoing: false
+    },
+    {
+        id: 6,
+        slug: 'state-estimation',
+        title: 'State Estimation',
+        image: moodVault,
+        description: 'An AI-powered state estimation algorithm in Python that predicts an agent\'s location based on recorded transitions and observations.',
+        stack: [<SiPython />, <SiNumpy />],
+        tag: 'Artificial Intelligence',
+        ongoing: false
+    },
+    {
+        id: 7,
+        slug: 'shortest-path',
+        title: 'Shortest Path',
+        image: moodVault,
+        description: 'A python program which either creates a random grid or takes a grid input and finds the shortest path using both the A* and Theta* algorithms.',
+        stack: [<SiPython />, <SiNumpy />],
+        tag: 'Artificial Intelligence',
+        ongoing: false
+    },
+    {
+        id: 8,
+        slug: 'one-we-one',
+        title: 'One We One',
+        image: moodVault,
+        description: 'One We One is an ongoing game project designed to include multiple two-player games, allowing friends to settle debates in a fun and competitive way.',
+        stack: [<SiJavascript />, <SiCss3 />, <SiHtml5 />, <SiGooglechrome />],
+        tag: 'Video Game',
+        ongoing: true
+    },
+    {
+        id: 9,
+        slug: 'uply',
+        title: 'UPLY',
+        image: moodVault,
+        description: 'A fresh approach to job hunting and learning about opportunities and sponsors at Hackathons.',
+        stack: [<SiFlutter />, <SiGooglecloud />, <SiAndroid />, <SiIos />],
+        tag: 'Mobile App',
+        ongoing: false
+    },
+]
 
 export const artworkCards = [
     {
         id: 1,
         image: legacy,
-        title: 'Artwork 1',
-        description: 'Some description of this artwork limited to a line',
-        medium: 'Digital',
+        title: 'Hogwarts Legacy',
+        medium: 'Digital - Photoshop',
+        description: 'A digital artwork inspired by the magical world of Hogwarts Legacy.',
+    },
+    {
+        id: 16,
+        image: hall,
+        title: 'Hall',
+        medium: 'Digital - Blender3d',
+        description: 'A moody digital 3d Model of an empty hall, playing with light and shadows.',
+    },
+    {
+        id: 6,
+        image: ink2,
+        title: 'Discover',
+        medium: 'Black Marker',
+        description: 'A bold black marker illustration created for Inktober challenge, Day 2.',
+    },
+    {
+        id: 4,
+        image: ross,
+        title: 'Ross Lynch',
+        medium: 'Poster Color',
+        description: 'A study in shadows with poster color painting of Ross Lynch',
+    },
+    {
+        id: 18,
+        image: eyes,
+        title: 'Eyes',
+        medium: 'Pencil',
+        description: 'A pencil sketch focusing on the depth and emotion captured in human eyes.',
+    },
+    {
+        id: 8,
+        image: ink20,
+        title: 'Uncharted',
+        medium: 'Black Marker',
+        description: 'A bold black marker illustration created for Inktober challenge, Day 20.',
     },
     {
         id: 2,
+        image: lips,
+        title: 'Lips',
+        medium: 'Watercolor on paper',
+        description: 'A delicate watercolor painting focusing on the soft details of lips.',
+    },
+    {
+        id: 13,
+        image: donut,
+        title: 'Donut',
+        medium: 'Digital - Blender3d',
+        description: 'A colorful digital 3d model of a delicious, glazed donut.',
+    },
+    {
+        id: 10,
+        image: ink24,
+        title: 'Expedition',
+        medium: 'Black Marker',
+        description: 'A bold black marker illustration created for Inktober challenge, Day 24.',
+    },
+    {
+        id: 11,
         image: me_outline,
-        title: 'Artwork 2',
-        description: 'Some description of this artwork limited to a line',
-        medium: 'Pencil on paper',
-    },
-    {
-        id: 3,
-        image: snor,
-        title: 'Artwork 3',
-        description: 'Some description of this artwork limited to a line',
-        medium: 'Watercolor on paper',
-    },
-    {
-        id: 4,
-        image: kuroo,
-        title: 'Artwork 4',
-        description: 'Some description of this artwork limited to a line',
-        medium: 'Digital',
+        title: 'Myself',
+        medium: 'Digital - Autodesk mobile',
+        description: 'An outline of myself made on my phone',
     },
     {
         id: 5,
-        image: donut,
-        title: 'Artwork 5',
-        description: 'Some description of this artwork limited to a line',
-        medium: 'Digital',
-    },
-    {
-        id: 6,
-        image: legacy,
-        title: 'Artwork 6',
-        description: 'Some description of this artwork limited to a line',
-        medium: 'Acrylic on paper',
-    },
-    {
-        id: 1,
-        image: legacy,
-        title: 'Artwork 1',
-        description: 'Some description of this artwork limited to a line',
-        medium: 'Digital',
+        image: selena,
+        title: 'Selena Gomez',
+        medium: 'Pencil',
+        description: 'A realistic pencil portrait of Selena Gomez, showcasing detailed shading and textures.',
     },
     {
         id: 3,
-        image: snor,
-        title: 'Artwork 3',
-        description: 'Some description of this artwork limited to a line',
-        medium: 'Watercolor on paper',
+        image: diagonalley,
+        title: 'Diagon Alley',
+        medium: 'Digital - Photoshop',
+        description: 'A digital illustration capturing me walking through enchanting atmosphere of Diagon Alley.',
     },
     {
-        id: 4,
-        image: kuroo,
-        title: 'Artwork 4',
-        description: 'Some description of this artwork limited to a line',
-        medium: 'Digital',
+        id: 7,
+        image: ink16,
+        title: 'Grunge',
+        medium: 'Black Marker',
+        description: 'A bold black marker illustration created for Inktober challenge, Day 16.',
     },
     {
-        id: 5,
-        image: donut,
-        title: 'Artwork 5',
-        description: 'Some description of this artwork limited to a line',
-        medium: 'Digital',
+        id: 9,
+        image: ink21,
+        title: 'Rhinoceros',
+        medium: 'Black Marker',
+        description: 'A bold black marker illustration created for Inktober challenge, Day 21.',
     },
     {
-        id: 6,
-        image: legacy,
-        title: 'Artwork 6',
-        description: 'Some description of this artwork limited to a line',
-        medium: 'Acrylic on paper',
+        id: 14,
+        image: mountainscape,
+        title: 'Mountain Scape',
+        medium: 'Digital - Photoshop',
+        description: 'A breathtaking digital landscape painting of towering mountains and foggy skies.',
     },
-]
+    {
+        id: 12,
+        image: ink31,
+        title: 'Landmark',
+        medium: 'Black Marker',
+        description: 'A bold black marker illustration created for Inktober challenge, Day 31.',
+    },
+    {
+        id: 15,
+        image: sound5,
+        title: 'Sound 4 ft. Sasuke',
+        medium: 'Watercolor',
+        description: 'A watercolor piece inspired by Sound 4 and Sasuke.',
+    },
+    {
+        id: 17,
+        image: guitar,
+        title: 'Guitar',
+        medium: 'Acrylic on Canvas',
+        description: 'A vibrant acrylic painting on canvas featuring a guitar.',
+    }
+];
+
+
+
+
 
 export const blogCards = [
     {
@@ -402,100 +490,10 @@ export const blogCards = [
         content: [
             { "type": "text", "data": "Welcome to my first blog post! Here, I will share my thoughts on React and dynamic content rendering. Typing more shit so that i can check if longer paragraphs work in this blog page. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." },
             { "type": "image", "data": inpainting, "alt": "React Logo" },
-            {"type": "heading", "data": "Chapter two"},
+            { "type": "heading", "data": "Chapter two" },
             { "type": "text", "data": "React makes it super easy to work with dynamic data. Using JSON, we can store blog content flexibly.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." },
-            { "type": "image", "data": snor, "alt": "A code snippet" },
+            { "type": "image", "data": ink16, "alt": "A code snippet" },
             { "type": "text", "data": "Stay tuned for more insights!" }
         ]
-    },
-    {
-        id: 2,
-        title: 'Story 2',
-        slug: 'story2',
-        image: inpainting,
-        description: 'Some description of this writing not limited to a line and it is actually pretty long since I need to fill the space taken from having to put an image here.',
-        tags: ['Case Study', 'Non-Fiction'],
-        time: '4 min',
-        link: 'https://example.com/project-two',
-    },
-    {
-        id: 3,
-        title: 'Story 3',
-        slug: 'story3',
-        image: inpainting,
-        description: 'Some description of this writing not limited to a line and it is actually pretty long since I need to fill the space taken from having to put an image here.',
-        tags: ['Non-Fiction'],
-        time: '3 min',
-        link: 'https://example.com/project-two',
-    },
-    {
-        id: 4,
-        title: 'Story 4',
-        slug: 'story4',
-        image: inpainting,
-        description: 'Some description of this writing not limited to a line and it is actually pretty long since I need to fill the space taken from having to put an image here.',
-        tags: ['Review'],
-        time: '11 min',
-        link: 'https://example.com/project-two',
-    },
-    {
-        id: 5,
-        title: 'Story 5',
-        slug: 'story5',
-        image: inpainting,
-        description: 'Some description of this writing not limited to a line and it is actually pretty long since I need to fill the space taken from having to put an image here.',
-        tags: ['Tutorial'],
-        time: '2 min',
-        link: 'https://example.com/project-two',
-    },
-    {
-        id: 1,
-        title: 'Story 1',
-        slug: 'story6',
-        image: inpainting,
-        description: 'Some description of this writing not limited to a line and it is actually pretty long since I need to fill the space taken from having to put an image here.',
-        tags: ['Fiction'],
-        time: '6 min',
-        link: 'https://example.com/project-two',
-    },
-    {
-        id: 2,
-        title: 'Story 2',
-        slug: 'story7',
-        image: inpainting,
-        description: 'Some description of this writing not limited to a line and it is actually pretty long since I need to fill the space taken from having to put an image here.',
-        tags: ['Case Study'],
-        time: '4 min',
-        link: 'https://example.com/project-two',
-    },
-    {
-        id: 3,
-        title: 'Story 3',
-        slug: 'story8',
-        image: inpainting,
-        description: 'Some description of this writing not limited to a line and it is actually pretty long since I need to fill the space taken from having to put an image here.',
-        tags: ['Non-Fiction'],
-        time: '3 min',
-        link: 'https://example.com/project-two',
-    },
-    {
-        id: 4,
-        title: 'Story 4',
-        slug: 'story9',
-        image: inpainting,
-        description: 'Some description of this writing not limited to a line and it is actually pretty long since I need to fill the space taken from having to put an image here.',
-        tags: ['Review'],
-        time: '11 min',
-        link: 'https://example.com/project-two',
-    },
-    {
-        id: 5,
-        title: 'Story 5',
-        slug: 'story10',
-        image: inpainting,
-        description: 'Some description of this writing not limited to a line and it is actually pretty long since I need to fill the space taken from having to put an image here.',
-        tags: ['Tutorial'],
-        time: '2 min',
-        link: 'https://example.com/project-two',
     },
 ]

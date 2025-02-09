@@ -7,7 +7,7 @@
 .projects__container {
     padding: 8rem 2rem 2rem 2rem;
     display: grid;
-    grid-template-rows: 1fr 60vh;
+    grid-template-rows: 1fr auto;
     grid-auto-flow: dense;
     gap: 1rem;
     align-items: center;
@@ -20,6 +20,7 @@
     vertical-align: middle;
     flex-direction: column;
     gap: 1.8rem;
+    margin-bottom: 1rem;
 }
 
 .projects__title>h1 {
@@ -42,7 +43,7 @@
     height: 100%;
     gap: 3.6rem;
     margin-top: 2rem;
-    padding: 0 0rem;
+    padding: 0rem 0rem;
 }
 
 .projects__item {
