@@ -1,8 +1,10 @@
 import React from "react";
-import { SiPython, SiCsharp, SiC, SiCplusplus, SiJavascript, SiFlutter, SiUnity, SiBlender, SiUnrealengine, SiGooglecloud, SiCss3, SiJava, SiReact, SiHtml5, SiAdobephotoshop, SiAndroid, SiIos, SiGooglechrome, SiTensorflow, SiMidi, SiAudacity, SiNumpy, SiPandas, SiFlask, SiKeras, SiGit, SiOpencv } from 'react-icons/si'
+import { SiPython, SiCsharp, SiC, SiCplusplus, SiJavascript, SiFlutter, SiUnity, SiBlender, SiUnrealengine, SiGooglecloud, SiCss3, SiJava, SiReact, SiHtml5, SiAdobephotoshop, SiAndroid, SiIos, SiGooglechrome, SiTensorflow, SiMidi, SiAudacity, SiNumpy, SiPandas, SiKeras, SiGit, SiOpencv } from 'react-icons/si'
 import { GrMysql } from 'react-icons/gr'
 import { FaAws, FaAngular } from "react-icons/fa";
 
+
+/// Artworks
 import legacy from '../artworkImages/legacy.png';
 import lips from '../artworkImages/lips.png';
 import diagonalley from '../artworkImages/diagonalley.png';
@@ -22,10 +24,18 @@ import hall from '../artworkImages/hall.png';
 import guitar from '../artworkImages/guitar.png';
 import eyes from '../artworkImages/eyes.png';
 
-import moodVault from '../projectImages/moodVault.png';
-import oneApp from '../projectImages/OneApp.png';
-import inpainting from '../blogImages/inpainting.png';
 
+/// Projects
+import moodVault from '../projectImages/moodVault.png';
+import oneApp from '../projectImages/hackru.png';
+import cupmixup from '../projectImages/cupmixup.png';
+import melodyai from '../projectImages/melodyai.png';
+import oneWeOne from '../projectImages/oneWeOne.png';
+import shortestpath from '../projectImages/shortestpath.png';
+import stateestimation from '../projectImages/stateestimation.png';
+import uply from '../projectImages/uply.png';
+import webfolio from '../projectImages/webfolio.png';
+import inpainting from '../blogImages/inpainting.png';
 
 
 export const languages = [
@@ -256,7 +266,7 @@ export const projectCards = [
         id: 1,
         slug: 'webfolio',
         title: 'WebFolio',
-        image: oneApp,
+        image: webfolio,
         description: 'This website-portfolio made for personal branding',
         stack: [<SiReact />, <SiCss3 />, <SiHtml5 />, <SiJavascript />],
         tag: 'Website',
@@ -276,7 +286,7 @@ export const projectCards = [
         id: 3,
         slug: 'cup-mix-up',
         title: 'Cup Mix Up',
-        image: oneApp,
+        image: cupmixup,
         description: 'A digital version of the classic cup shuffle game',
         stack: [<SiUnity />, <SiCsharp />, <SiBlender />],
         tag: 'Video Game',
@@ -296,7 +306,7 @@ export const projectCards = [
         id: 5,
         slug: 'melody-ai',
         title: 'MelodyAI',
-        image: moodVault,
+        image: melodyai,
         description: 'An LSTM-based neural network using Tensorflow for AI-driven music composition, capable of generating complex melodies with human-like structure',
         stack: [<SiPython />, <SiTensorflow />, <SiMidi />, <SiAudacity />],
         tag: 'Deep Learning',
@@ -306,7 +316,7 @@ export const projectCards = [
         id: 6,
         slug: 'state-estimation',
         title: 'State Estimation',
-        image: moodVault,
+        image: stateestimation,
         description: 'An AI-powered state estimation algorithm in Python that predicts an agent\'s location based on recorded transitions and observations.',
         stack: [<SiPython />, <SiNumpy />],
         tag: 'Artificial Intelligence',
@@ -316,7 +326,7 @@ export const projectCards = [
         id: 7,
         slug: 'shortest-path',
         title: 'Shortest Path',
-        image: moodVault,
+        image: shortestpath,
         description: 'A python program which either creates a random grid or takes a grid input and finds the shortest path using both the A* and Theta* algorithms.',
         stack: [<SiPython />, <SiNumpy />],
         tag: 'Artificial Intelligence',
@@ -326,7 +336,7 @@ export const projectCards = [
         id: 8,
         slug: 'one-we-one',
         title: 'One We One',
-        image: moodVault,
+        image: oneWeOne,
         description: 'One We One is an ongoing game project designed to include multiple two-player games, allowing friends to settle debates in a fun and competitive way.',
         stack: [<SiJavascript />, <SiCss3 />, <SiHtml5 />, <SiGooglechrome />],
         tag: 'Video Game',
@@ -336,7 +346,7 @@ export const projectCards = [
         id: 9,
         slug: 'uply',
         title: 'UPLY',
-        image: moodVault,
+        image: uply,
         description: 'A fresh approach to job hunting and learning about opportunities and sponsors at Hackathons.',
         stack: [<SiFlutter />, <SiGooglecloud />, <SiAndroid />, <SiIos />],
         tag: 'Mobile App',
@@ -472,10 +482,6 @@ export const artworkCards = [
         description: 'A vibrant acrylic painting on canvas featuring a guitar.',
     }
 ];
-
-
-
-
 
 export const blogCards = [
     {

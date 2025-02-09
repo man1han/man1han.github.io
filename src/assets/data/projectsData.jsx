@@ -1,12 +1,6 @@
-import { SiPython, SiCsharp, SiC, SiCplusplus, SiJavascript, SiFlutter, SiUnity, SiBlender, SiUnrealengine, SiGooglecloud, SiCss3, SiJava, SiReact, SiHtml5, SiAdobephotoshop } from 'react-icons/si'
-import { GrMysql } from 'react-icons/gr'
-import { FaAws, FaAngular } from "react-icons/fa";
+
 import moodVault from '../projectImages/moodVault.png';
-import oneApp from '../projectImages/OneApp.png';
-import donut from '../artworkImages/donut.png';
-import inpainting from '../blogImages/inpainting.png';
-import legacy from '../artworkImages/legacy.png';
-import me_outline from '../artworkImages/me_outline.png';
+import oneApp from '../projectImages/hackru.png';
 
 export const projectDetails = [
     {
@@ -31,7 +25,7 @@ export const projectDetails = [
         title: 'OneApp',
         image: oneApp,
         description: 'Mobile App used in Rutgers\' hackathon: HackRU',
-        stack: [<SiFlutter />],
+        stack: ['flutter'],
         tags: ['Android', 'iOS', 'Web'],
         ongoing: false,
         github: 'https://github.com/HackRU/OneAppFlutter',
@@ -43,7 +37,7 @@ export const projectDetails = [
         title: 'Webfolio',
         image: oneApp,
         description: 'This webpage developed using React.',
-        stack: [<SiReact />, <SiCss3 />],
+        stack: ['react', 'css'],
         tags: ['Web', 'UI'],
         ongoing: false,
         github: 'https://github.com/man1han/man1han.github.io',
@@ -55,7 +49,7 @@ export const projectDetails = [
         title: 'Mood Vault',
         image: moodVault,
         description: 'Mood Vault is a powerful Google Chrome extension that provides an intuitive and seamless way for creative minds to create and manage mood boards effortlessly',
-        stack: [<SiJavascript />, <SiCss3 />, <SiHtml5 />],
+        stack: ['javascript'],
         tags: ['Web'],
         ongoing: false,
         github: 'https://chrome.google.com/webstore/detail/mood-vault/fdnlmnoceadijklmomfedckgjdclacgo',

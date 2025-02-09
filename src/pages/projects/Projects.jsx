@@ -40,7 +40,6 @@ const Projects = () => {
                 <Link key={item.slug} to={`/projects/${item.slug}`} className="projects__item-link"  onClick={handleProjectClick}>
                   <CTA text={"Read more"}></CTA>
                 </Link>
-
               </div>
               <div className="projects__image-container">
                 <img src={item.image} alt={item.title} className='projects__item-image' />
