@@ -43,16 +43,16 @@ function ProjectDetails() {
 
             <div className="project-first">
                 <div className="project-background">
-                    <h6>Background and Motivation</h6>
+                    <h3>Background and Motivation</h3>
                     <p>{project.background}</p>
                 </div>
                 <div className="project-meta">
                     <div className="project-timeline">
-                        <h6>Timeline</h6>
+                        <h5>Timeline</h5>
                         <p>{project.timeline}</p>
                     </div>
                     <div className="project-stack">
-                        <h6>Tech Stack</h6>
+                        <h5>Tech Stack</h5>
                         <div className='project-stack-in'>
                             {project.stack.map((stacks, index) => (
                                 <div key={index}  >
@@ -63,7 +63,7 @@ function ProjectDetails() {
 
                     </div>
                     <div className="project-skills">
-                        <h6>Skills</h6>
+                        <h5>Skills</h5>
                         <div className='project-skills-in'>
                             {project.skills.map((skills, index) => (
                                 <div key={index}>
@@ -74,26 +74,62 @@ function ProjectDetails() {
 
                     </div>
                     <div className="project-links">
-                        <h6>Links</h6>
-                        <div className="project-links-in">
-                            <CTA text={'Github'} link={project.github} />
-                            <CTA text={'Demo'} link={project.demo} />
-                        </div>
-
+                        {project.github || project.demo ? (
+                            <>
+                                <h5>Links</h5>
+                                <div className="project-links-in">
+                                    {project.github && <CTA text={'Github'} link={project.github} />}
+                                    {project.demo && <CTA text={'Demo'} link={project.demo} />}
+                                </div>
+                            </>
+                        ) : null}
                     </div>
                 </div>
             </div>
             <div className="project-dnd">
-                <h6>Design and Developement</h6>
-                <p>{project.dnd}</p>
+                <h3>Design and Developement</h3>
+                {project.dnd.map((block, index) => {
+                    if (block.type === "text") {
+                        return <p key={index}>{block.data}</p>;
+                    } else if (block.type === "image") {
+                        return <CaptionedImage key={index} text={block.alt} link={block.data} />;
+                    }
+                    else if (block.type === "heading") {
+                        return <h5 key={index}>{block.data}</h5>
+                    }
+                    return null;
+                })}
             </div>
             <div className="project-challenges">
-                <h6>Challenges</h6>
-                <p>{project.challenges}</p>
+                <h3>Challenges</h3>
+                {project.challenges.map((block, index) => {
+                    if (block.type === "text") {
+                        return <p key={index}>{block.data}</p>;
+                    } else if (block.type === "image") {
+                        return <CaptionedImage key={index} text={block.alt} link={block.data} />;
+                    }
+                    else if (block.type === "heading") {
+                        return <h5 key={index}>{block.data}</h5>
+                    }
+                    return null;
+                })}
             </div>
             <div className="project-results">
-                <h6>Results</h6>
-                <p>{project.results}</p>
+                <h3>Results</h3>
+                {project.results.map((block, index) => {
+                    if (block.type === "text") {
+                        return <p key={index}>{block.data}</p>;
+                    } else if (block.type === "image") {
+                        return <CaptionedImage key={index} text={block.alt} link={block.data} />;
+                    }
+                    else if (block.type === "heading") {
+                        return <h5 key={index}>{block.data}</h5>
+                    }
+                    else if (block.type === "audio") {
+                        return <audio controls key={index} src={block.data}></audio>
+                    }
+                    return null;
+                })}
             </div>
         </div>
     );

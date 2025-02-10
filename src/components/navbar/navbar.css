@@ -68,7 +68,7 @@ nav {
 
 
 .socials_section {
-    position: fixed;
+    position: absolute;
     bottom: 20px;
     right: 40px;
     z-index: 10;

@@ -12,6 +12,24 @@
     text-decoration: none;
 }
 
+/* Define the fade-in animation */
+@keyframes fadeIn {
+    0% { 
+        opacity: 0;
+        transform: translateX(-30px); /* Starts above the normal position */
+    }
+    100% { 
+        opacity: 1;
+        transform: translateX(0); /* Ends at its normal position */
+    }
+}
+
+/* Apply the animation to all elements */
+* :not(.experience__bar-bottom, .hover-info, .hover-effect) {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+
 /* Creating variables */
 :root {
 
@@ -204,6 +222,12 @@ img {
     .container {
         width: var(--container-width-md);
     }
+
+    .captionedImage>img {
+        height: auto;
+        width: 80vw;
+        object-fit: contain;
+    } 
 }
 
 /* =============== MEDIA QUERIES (SMALL DEVICES) ============ */

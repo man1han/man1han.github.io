@@ -30,5 +30,21 @@
     flex-direction: column;
     width: 90%;
     gap: 1rem;
-    line-height: 1.2;
+    line-height: 1.5;
+}
+
+.blog-content h5 {
+    margin-top: 2rem;
+    color: var(--color-primary);
+}
+
+.blog-content img {
+    object-fit: contain !important;
+}
+
+@media screen and (max-width: 1024px) {
+    .blog-page {
+        padding: 10rem 0rem 12rem 0rem;
+    }
+
 }

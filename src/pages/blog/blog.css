@@ -103,6 +103,6 @@
     }
     .blog__item {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1.2fr;
+        grid-template-rows: 1fr 1.5fr;
     }
 }

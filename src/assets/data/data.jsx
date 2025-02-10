@@ -35,7 +35,9 @@ import shortestpath from '../projectImages/shortestpath.png';
 import stateestimation from '../projectImages/stateestimation.png';
 import uply from '../projectImages/uply.png';
 import webfolio from '../projectImages/webfolio.png';
-import inpainting from '../blogImages/inpainting.png';
+
+/// Blogs
+import compsci from '../blogImages/compsci.jpg'
 
 
 export const languages = [
@@ -486,20 +488,11 @@ export const artworkCards = [
 export const blogCards = [
     {
         id: 1,
-        title: 'Story 1',
-        slug: 'story1',
-        image: inpainting,
-        description: 'Some description of this writing not limited to a line and it is actually pretty long since I need to fill the space taken from having to put an image here.',
-        tags: ['Fiction'],
-        time: '6 min',
-        link: 'https://example.com/project-two',
-        content: [
-            { "type": "text", "data": "Welcome to my first blog post! Here, I will share my thoughts on React and dynamic content rendering. Typing more shit so that i can check if longer paragraphs work in this blog page. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." },
-            { "type": "image", "data": inpainting, "alt": "React Logo" },
-            { "type": "heading", "data": "Chapter two" },
-            { "type": "text", "data": "React makes it super easy to work with dynamic data. Using JSON, we can store blog content flexibly.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." },
-            { "type": "image", "data": ink16, "alt": "A code snippet" },
-            { "type": "text", "data": "Stay tuned for more insights!" }
-        ]
+        title: 'Why I Chose to Pursue Computer Science',
+        slug: 'why-i-chose-to-pursue-comp-sci',
+        image: compsci,
+        description: 'Have you ever wondered how your favorite app or game was made? For me, that curiosity turned into a passion for computer science.',
+        tags: ['Non-Fiction'],
+        time: '3 min',
     },
 ]

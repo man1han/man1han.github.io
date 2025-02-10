@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { blogCards } from '../../assets/data/data'; // Import the same data
+import { blogsData } from '../../assets/data/blogsData';
 import './blogPage.css'
 import './blog.css'
 import CaptionedImage from '../../components/CaptionedImage';
@@ -20,7 +21,7 @@ function BlogPage() {
         }, 100);
     };
     const { blogSlug } = useParams();
-    const blog = blogCards.find((b) => b.slug === blogSlug);
+    const blog = blogsData.find((b) => b.slug === blogSlug);
 
     if (!blog) {
         return <h2>Project not found</h2>;
