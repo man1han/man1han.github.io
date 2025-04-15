@@ -208,5 +208,7 @@
     .projects__item {
         width: unset;
         height: 100vw;
+        padding-bottom: 2rem;
+        
     }
 }
