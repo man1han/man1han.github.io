@@ -1,7 +1,8 @@
 import React from "react";
 import { SiPython, SiCsharp, SiC, SiCplusplus, SiJavascript, SiFlutter, SiUnity, SiBlender, SiUnrealengine, SiGooglecloud, SiCss3, SiJava, SiReact, SiHtml5, SiAdobephotoshop, SiAndroid, SiIos, SiGooglechrome, SiTensorflow, SiMidi, SiAudacity, SiNumpy, SiPandas, SiKeras, SiGit, SiOpencv } from 'react-icons/si'
+import { SiSpringboot, SiNodedotjs, SiDocker, SiKubernetes,SiJenkins, SiRedux } from "react-icons/si";
 import { GrMysql } from 'react-icons/gr'
-import { FaAws, FaAngular } from "react-icons/fa";
+import { FaAws, FaAngular, FaPlus} from "react-icons/fa";
 
 
 /// Artworks
@@ -94,13 +95,13 @@ export const languages = [
 export const technologies = [
     {
         id: 1,
-        icon: <SiPandas />,
-        name: 'Pandas',
+        icon: <SiSpringboot />,
+        name: 'Spring Boot',
     },
     {
         id: 2,
-        icon: <SiNumpy />,
-        name: 'Numpy',
+        icon: <SiNodedotjs />,
+        name: 'Node.js',
     },
     {
         id: 3,
@@ -125,12 +126,12 @@ export const technologies = [
     {
         id: 7,
         icon: <SiReact />,
-        name: 'React',
+        name: 'React.js',
     },
     {
         id: 8,
         icon: <FaAngular />,
-        name: 'Angular',
+        name: 'Angular.js',
     },
     {
         id: 9,
@@ -140,23 +141,23 @@ export const technologies = [
 
     {
         id: 10,
-        icon: <SiUnity />,
-        name: 'Unity',
+        icon: <SiDocker />,
+        name: 'Docker',
     },
     {
         id: 11,
-        icon: <SiUnrealengine />,
-        name: 'Unreal Engine',
+        icon: <SiKubernetes />,
+        name: 'Kubernetes',
     },
     {
         id: 12,
-        icon: <SiBlender />,
-        name: 'Blender',
+        icon: <SiJenkins />,
+        name: 'Jenkins',
     },
     {
         id: 13,
-        icon: <SiAdobephotoshop />,
-        name: 'Photoshop',
+        icon: <SiRedux />,
+        name: 'Redux',
     },
     {
         id: 14,
@@ -168,6 +169,12 @@ export const technologies = [
         icon: <SiOpencv />,
         name: 'OpenCV',
     },
+    {
+        id: 15,
+        icon: <FaPlus />,
+        name: 'And More...',
+    },
+
 ]
 
 export const education = [
@@ -203,6 +210,28 @@ export const education = [
 export const workExperience = [
     {
         id: 1,
+        title: 'Software Developer',
+        company: 'Humana',
+        location: 'Remote',
+        start: 'Aug 2023',
+        end: 'Current',
+        description: [
+            'Led React-based real-time risk dashboard with ML, designed scalable Spring Boot microservices (Kafka), enhanced security/logging, optimized APIs (Node.js/Express.js), deployed on AWS (Docker/Kubernetes), automated CI/CD, optimized PostgreSQL, secured APIs (JWT/OAuth2), and refactored monolithic system to microservices.'
+        ]
+    },
+    {
+        id: 2,
+        title: 'Software Developer',
+        company: 'Capital One',
+        location: 'Remote',
+        start: 'Jan 2022',
+        end: 'Jul 2023',
+        description: [
+            'Architected resilient Java microservices with RESTful APIs, developed interactive React UI with optimized state management (Redux/Context), enhanced performance with MySQL, implemented CI/CD (Jenkins/Docker/Kubernetes), and ensured code quality and collaboration using Git/JIRA/Maven/JUnit.'
+        ]
+    },
+    {
+        id: 3,
         title: 'Senior Mobile App Developer',
         company: 'HackRU',
         location: 'New Brunswick, NJ',
@@ -213,7 +242,7 @@ export const workExperience = [
         ]
     },
     {
-        id: 2,
+        id: 4,
         title: 'Help Desk Operator',
         company: 'Rutgers University',
         location: 'Piscatway, NJ',
@@ -224,7 +253,7 @@ export const workExperience = [
         ]
     },
     {
-        id: 3,
+        id: 5,
         title: 'Research Assistant',
         company: 'PRACSYS Robotics Lab',
         location: 'New Brunswick, NJ',
